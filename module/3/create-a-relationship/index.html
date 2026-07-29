@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create a relationship — Module 3 — Belajar Power BI</title>
+<meta name="description" content="Lesson: Create a relationship. In about 12 minutes you will be able to join two tables in Model view by dragging one ID onto another.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">bP</span>
+      <span>Belajar Power BI</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/curriculum/">Curriculum</a>
+      <a href="/downloads/">Downloads</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="first-visit" id="firstVisit" hidden>
+  <div class="container">
+    <span>Your progress is saved to this browser only — no account, no tracking.</span>
+    <button type="button" id="dismissFirstVisit">Got it</button>
+  </div>
+</div>
+<div class="mobile-progress">
+  <div class="container">
+    <span class="label" id="mobileProgressLabel">Progress</span>
+    <span class="bar"><span id="mobileProgressBar"></span></span>
+  </div>
+</div><main id="main">
+<div class="container">
+  <div class="lesson-layout">
+    <nav class="module-rail" aria-label="Course progress">
+  <h2>Your progress</h2>
+  <div class="rail-module"><div class="rail-module-title">Module 0</div><ul class="rail-lessons"><li><a href="/module/0/what-is-power-bi/" data-lesson-id="m0-what-is-power-bi"><span class="rail-state" aria-hidden="true"></span><span>What Power BI actually is</span></a></li><li><a href="/module/0/install-power-bi-desktop/" data-lesson-id="m0-install-power-bi-desktop"><span class="rail-state" aria-hidden="true"></span><span>Installing Power BI Desktop</span></a></li><li><a href="/module/0/tour-of-the-window/" data-lesson-id="m0-tour-of-the-window"><span class="rail-state" aria-hidden="true"></span><span>A tour of the Power BI Desktop window</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 1</div><ul class="rail-lessons"><li><a href="/module/1/understanding-data-sources/" data-lesson-id="m1-understanding-data-sources"><span class="rail-state" aria-hidden="true"></span><span>Where data comes from</span></a></li><li><a href="/module/1/import-your-first-file/" data-lesson-id="m1-import-your-first-file"><span class="rail-state" aria-hidden="true"></span><span>Import your first file</span></a></li><li><a href="/module/1/reading-the-load-screen/" data-lesson-id="m1-reading-the-load-screen"><span class="rail-state" aria-hidden="true"></span><span>Reading the load screen</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 2</div><ul class="rail-lessons"><li><a href="/module/2/what-is-power-query/" data-lesson-id="m2-what-is-power-query"><span class="rail-state" aria-hidden="true"></span><span>What Power Query is</span></a></li><li><a href="/module/2/remove-columns-and-rows/" data-lesson-id="m2-remove-columns-and-rows"><span class="rail-state" aria-hidden="true"></span><span>Remove columns and rows you don&#x27;t need</span></a></li><li><a href="/module/2/fix-data-types/" data-lesson-id="m2-fix-data-types"><span class="rail-state" aria-hidden="true"></span><span>Fix data types</span></a></li><li><a href="/module/2/close-and-apply/" data-lesson-id="m2-close-and-apply"><span class="rail-state" aria-hidden="true"></span><span>Split, replace, and close &amp; apply</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 3</div><ul class="rail-lessons"><li><a href="/module/3/what-is-a-data-model/" data-lesson-id="m3-what-is-a-data-model"><span class="rail-state" aria-hidden="true"></span><span>What a data model is</span></a></li><li><a href="/module/3/create-a-relationship/" data-lesson-id="m3-create-a-relationship" aria-current="page"><span class="rail-state" aria-hidden="true"></span><span>Create a relationship</span></a></li><li><a href="/module/3/reading-the-model-view/" data-lesson-id="m3-reading-the-model-view"><span class="rail-state" aria-hidden="true"></span><span>Reading the Model view</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 4</div><ul class="rail-lessons"><li><a href="/module/4/your-first-chart/" data-lesson-id="m4-your-first-chart"><span class="rail-state" aria-hidden="true"></span><span>Your first chart</span></a></li><li><a href="/module/4/cards-tables-slicers/" data-lesson-id="m4-cards-tables-slicers"><span class="rail-state" aria-hidden="true"></span><span>Cards, tables, and slicers</span></a></li><li><a href="/module/4/formatting-and-layout/" data-lesson-id="m4-formatting-and-layout"><span class="rail-state" aria-hidden="true"></span><span>Formatting and layout</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 5</div><ul class="rail-lessons"><li><a href="/module/5/columns-vs-measures/" data-lesson-id="m5-columns-vs-measures"><span class="rail-state" aria-hidden="true"></span><span>Columns vs measures</span></a></li><li><a href="/module/5/your-first-measure/" data-lesson-id="m5-your-first-measure"><span class="rail-state" aria-hidden="true"></span><span>Your first measure</span></a></li><li><a href="/module/5/useful-measures/" data-lesson-id="m5-useful-measures"><span class="rail-state" aria-hidden="true"></span><span>Count and average</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 6</div><ul class="rail-lessons"><li><a href="/module/6/sign-in-and-publish/" data-lesson-id="m6-sign-in-and-publish"><span class="rail-state" aria-hidden="true"></span><span>Sign in and publish</span></a></li><li><a href="/module/6/share-your-dashboard/" data-lesson-id="m6-share-your-dashboard"><span class="rail-state" aria-hidden="true"></span><span>Share your dashboard</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 7</div><ul class="rail-lessons"><li><a href="/module/7/build-the-dashboard/" data-lesson-id="m7-build-the-dashboard"><span class="rail-state" aria-hidden="true"></span><span>Build the capstone dashboard</span></a></li><li><a href="/module/7/checklist-and-next-steps/" data-lesson-id="m7-checklist-and-next-steps"><span class="rail-state" aria-hidden="true"></span><span>Final checklist and where to go next</span></a></li></ul></div>
+</nav>
+    <article class="lesson-content" data-lesson-id="m3-create-a-relationship">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/module/3/">Module 3</a></li>
+          <li aria-current="page">Create a relationship</li>
+        </ol>
+      </nav>
+
+      <h1>Create a relationship</h1>
+
+      <p class="outcome">In about 12 minutes you will be able to
+      join two tables in Model view by dragging one ID onto another.<br>
+      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
+      12 menit kamu bakal bisa menyatukan dua tabel di Model view dengan menyeret satu ID ke ID lainnya.</span></p>
+
+      <div class="meta-row">
+        <span class="meta-item">⏱ <strong>12 min</strong></span>
+        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
+        <span class="meta-item">✅ You need first: <strong>Both tables loaded (sales and products).</strong></span>
+      </div>
+
+      <div class="dataset-cta">
+  <div class="ds-text">
+    <strong>Practice dataset: Sales and products</strong>
+    <span>Load both CSV files before you start. <span lang="id">/ Muat kedua file CSV sebelum mulai.</span></span>
+  </div>
+  <a class="btn btn-download" href="/datasets/sales-and-products.zip" download>⬇ Download dataset</a>
+</div>
+
+      <p>Now we connect the two tables for real. It's a single drag, done in the Model view.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang kita hubungkan kedua tabel beneran. Cuma satu tarikan, dilakukan di Model view.</p>
+
+      <ol class="steps">
+        <li class="step">
+  <p>Click the <strong>Model view</strong> icon, the third icon on the far left edge (it looks like connected boxes).</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik ikon <strong>Model view</strong>, ikon ketiga di tepi paling kiri (bentuknya seperti kotak yang terhubung).</p>
+  <p class="menu-path">Menu path: <span class="path">Left edge ▸ Model view</span></p>
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/model-view-icon.svg"
+    aria-label="The three view icons on the left edge of Power BI with the third Model view icon highlighted. (tap to open full screen)">
+    <img src="/assets/img/model-view-icon.svg" alt="The three view icons on the left edge of Power BI with the third Model view icon highlighted." loading="lazy" decoding="async">
+    <span class="callout" style="left:30%;top:55%;" aria-hidden="true">1</span>
+  </button>
+  <ol class="figure-legend"><li><span>The Model view icon (third one)</span> <span lang="id" class="lang-id">· Ikon Model view (yang ketiga)</span></li></ol>
+  
+</figure>
+</li><li class="step">
+  <p>You see both tables as boxes with their column names. If a line already joins them, Power BI guessed the relationship — you're done, skip to the checkpoint.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu lihat kedua tabel sebagai kotak berisi nama kolom. Kalau sudah ada garis yang menyatukan, Power BI sudah menebak relationship — selesai, lompat ke checkpoint.</p>
+  
+  
+</li><li class="step">
+  <p>If there's no line, drag <strong>Product ID</strong> from the Sales box and drop it onto <strong>Product ID</strong> in the Products box.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Kalau nggak ada garis, seret <strong>Product ID</strong> dari kotak Sales dan jatuhkan ke <strong>Product ID</strong> di kotak Products.</p>
+  
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/model-drag.svg"
+    aria-label="Two table boxes in Model view with an arrow showing Product ID being dragged from the Sales table onto Product ID in the Products table. (tap to open full screen)">
+    <img src="/assets/img/model-drag.svg" alt="Two table boxes in Model view with an arrow showing Product ID being dragged from the Sales table onto Product ID in the Products table." loading="lazy" decoding="async">
+    <span class="callout" style="left:25%;top:60%;" aria-hidden="true">1</span><span class="callout" style="left:75%;top:40%;" aria-hidden="true">2</span>
+  </button>
+  <ol class="figure-legend"><li><span>Drag Product ID from Sales</span> <span lang="id" class="lang-id">· Seret Product ID dari Sales</span></li><li><span>Drop it on Product ID in Products</span> <span lang="id" class="lang-id">· Jatuhkan di Product ID di Products</span></li></ol>
+  
+</figure>
+</li><li class="step">
+  <p>A line now connects the two boxes. That line is your relationship. Hover it and it highlights the two linked columns.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang garis menghubungkan kedua kotak. Garis itu relationship-mu. Arahkan kursor ke garis dan dia menyorot dua kolom yang terhubung.</p>
+  
+  
+</li>
+      </ol>
+
+      <div class="checkpoint">
+  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
+  <p>A single line runs between the Sales and Products boxes, connecting their Product ID columns.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Satu garis membentang antara kotak Sales dan Products, menghubungkan kolom Product ID mereka.</p>
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/cp-relationship.svg"
+    aria-label="Two tables in Model view joined by a single relationship line between their Product ID columns. (tap to open full screen)">
+    <img src="/assets/img/cp-relationship.svg" alt="Two tables in Model view joined by a single relationship line between their Product ID columns." loading="lazy" decoding="async">
+    
+  </button>
+  
+  
+</figure>
+</div>
+
+      <div class="callout-block">
+        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
+        <p>This one line is what lets you build a chart of sales totals broken down by product name — even though sales and names live in different tables. It's the quiet engine under every good report.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Satu garis ini yang memungkinkan kamu membuat grafik total penjualan dipecah per nama produk — padahal penjualan dan nama ada di tabel berbeda. Ini mesin senyap di balik setiap report yang bagus.</p>
+      </div>
+
+      <div class="callout-block">
+        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <ul class="mistakes">
+          <li><strong>Dragging the wrong columns together</strong> <span lang="id">/ Menyeret kolom yang salah</span><br>Always join ID to matching ID. Joining Name to Price makes a broken, meaningless link. <span lang="id" class="lang-id" style="color:var(--text-muted)">Selalu satukan ID ke ID yang cocok. Menyatukan Name ke Price membuat hubungan rusak yang nggak bermakna.</span></li><li><strong>Making two relationships between the same tables</strong> <span lang="id">/ Membuat dua relationship antara tabel yang sama</span><br>You usually want just one active line. If you see a dotted extra line, delete it by clicking and pressing Delete. <span lang="id" class="lang-id" style="color:var(--text-muted)">Biasanya kamu cuma mau satu garis aktif. Kalau ada garis putus-putus tambahan, hapus dengan klik lalu tekan Delete.</span></li>
+        </ul>
+      </div>
+
+      <div class="lesson-actions">
+        <div class="complete-row">
+          <button type="button" class="btn btn-secondary mark-complete" id="markComplete"
+            data-lesson-id="m3-create-a-relationship">Mark this lesson complete</button>
+          <span class="complete-state js-only" id="completeState"></span>
+        </div>
+        <a class="btn btn-primary next-step" href="/module/3/reading-the-model-view/">Next: Reading the Model view →</a>
+      </div>
+
+    </article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Belajar Power BI</h3>
+        <p>A free, beginner-first course that takes you from never opening
+        Power BI to publishing your first dashboard. Built by Dhany Indraswara.</p>
+        <p class="js-only" id="footerProgress"></p>
+      </div>
+      <div>
+        <h3>Course</h3>
+        <ul class="footer-links">
+          <li><a href="/curriculum/">Curriculum</a></li>
+          <li><a href="/downloads/">Downloads</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Settings</h3>
+        <ul class="footer-links">
+          <li><button type="button" class="reset-progress" id="resetProgress">Reset my progress</button></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.85rem;">Progress is stored in this
+        browser using localStorage. No cookies. No accounts. No tracking.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Belajar Power BI. Free to use and share.</span>
+      <span>Power BI is a product of Microsoft. This site is an independent tutorial.</span>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-screen image">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close full screen">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

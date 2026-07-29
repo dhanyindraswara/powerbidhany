@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Belajar Power BI</title>
+<meta name="description" content="Who made this free beginner Power BI course, and why.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">bP</span>
+      <span>Belajar Power BI</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/curriculum/">Curriculum</a>
+      <a href="/downloads/">Downloads</a>
+      <a href="/about/" aria-current="page">About</a>
+    </nav>
+  </div>
+</header>
+<div class="first-visit" id="firstVisit" hidden>
+  <div class="container">
+    <span>Your progress is saved to this browser only — no account, no tracking.</span>
+    <button type="button" id="dismissFirstVisit">Got it</button>
+  </div>
+</div>
+<main id="main">
+<div class="container reading">
+  <section>
+    <h1>About this course</h1>
+    <p class="lead">Made for the version of me who once opened Power BI, felt
+    completely lost, and closed it again.</p>
+
+    <h2>Why it exists</h2>
+    <p>Most Power BI tutorials assume you already know what a database is, move too fast, and are written in dense English. This course assumes none of that. It is written for working professionals in Indonesia who need Power BI for their job and are starting from absolute zero.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Kebanyakan tutorial Power BI mengira kamu sudah tahu apa itu database, jalannya kecepatan, dan ditulis dalam bahasa Inggris yang padat. Kursus ini nggak begitu. Ditulis buat pekerja di Indonesia yang butuh Power BI untuk kerja dan mulai dari benar-benar nol.</p>
+
+    <h2>How it's built</h2>
+    <ul>
+      <li>Every lesson uses the exact same template, so you always know what to expect.</li>
+      <li>Every click has a screenshot with numbered callouts.</li>
+      <li>Explanations are in casual Bahasa Indonesia and English, side by side.</li>
+      <li>Power BI's own menu names are kept in English, so you can find them.</li>
+    </ul>
+
+    <h2>Your privacy</h2>
+    <p>This site has no accounts, no login, no database, no analytics, and no cookies. Your progress is saved in your own browser using localStorage and never leaves your device. You can clear it any time from the footer.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Situs ini nggak punya akun, login, database, analitik, atau cookie. Progresmu disimpan di browser-mu sendiri pakai localStorage dan nggak pernah keluar dari perangkatmu. Kamu bisa menghapusnya kapan saja dari footer.</p>
+
+    <h2>A note on the screenshots</h2>
+    <p>The screenshots on this site are clean placeholders that show the annotation system. When you follow along in real Power BI Desktop, your screen will match the described menus and buttons even if the placeholder art is simplified.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Screenshot di situs ini adalah placeholder bersih yang menunjukkan sistem anotasi. Saat kamu mengikuti di Power BI Desktop asli, layarmu akan cocok dengan menu dan tombol yang dijelaskan meski gambar placeholder-nya disederhanakan.</p>
+
+    <p style="margin-top:32px">
+      <a class="btn btn-primary" href="/curriculum/">See the curriculum →</a>
+    </p>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Belajar Power BI</h3>
+        <p>A free, beginner-first course that takes you from never opening
+        Power BI to publishing your first dashboard. Built by Dhany Indraswara.</p>
+        <p class="js-only" id="footerProgress"></p>
+      </div>
+      <div>
+        <h3>Course</h3>
+        <ul class="footer-links">
+          <li><a href="/curriculum/">Curriculum</a></li>
+          <li><a href="/downloads/">Downloads</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Settings</h3>
+        <ul class="footer-links">
+          <li><button type="button" class="reset-progress" id="resetProgress">Reset my progress</button></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.85rem;">Progress is stored in this
+        browser using localStorage. No cookies. No accounts. No tracking.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Belajar Power BI. Free to use and share.</span>
+      <span>Power BI is a product of Microsoft. This site is an independent tutorial.</span>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-screen image">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close full screen">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

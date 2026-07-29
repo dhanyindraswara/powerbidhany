@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads — Belajar Power BI</title>
+<meta name="description" content="All practice datasets for the course in one place.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">bP</span>
+      <span>Belajar Power BI</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/curriculum/">Curriculum</a>
+      <a href="/downloads/" aria-current="page">Downloads</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="first-visit" id="firstVisit" hidden>
+  <div class="container">
+    <span>Your progress is saved to this browser only — no account, no tracking.</span>
+    <button type="button" id="dismissFirstVisit">Got it</button>
+  </div>
+</div>
+<main id="main">
+<div class="container reading">
+  <section style="padding-bottom:0">
+    <h1>Downloads</h1>
+    <p class="lead">Every practice dataset in one place. Small, safe CSV files —
+    nothing to install. <span lang="id">Semua dataset latihan di satu tempat.</span></p>
+    <div class="notice">
+      <strong>How to use these:</strong> download the file for the lesson you're on,
+      then load it with <span class="path">Home ▸ Get data ▸ Text/CSV</span> inside
+      Power BI Desktop.
+    </div>
+  </section>
+  <section style="padding-top:24px">
+    <table class="download-table">
+      <thead>
+        <tr><th>Dataset</th><th>Used in</th><th>File</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td><strong>Coffee shop sales</strong><br>
+      <span style="color:var(--text-muted)">90 rows of pretend sales from a small coffee shop.</span></td>
+  <td><a href="/module/1/">Module 1</a></td>
+  <td><a class="btn btn-download" href="/datasets/coffee-sales.csv" download>⬇ coffee-sales.csv</a></td>
+</tr><tr>
+  <td><strong>Messy orders</strong><br>
+      <span style="color:var(--text-muted)">60 rows with blank cells, wrong types, and extra columns — deliberately messy.</span></td>
+  <td><a href="/module/2/">Module 2</a></td>
+  <td><a class="btn btn-download" href="/datasets/messy-orders.csv" download>⬇ messy-orders.csv</a></td>
+</tr><tr>
+  <td><strong>Sales and products</strong><br>
+      <span style="color:var(--text-muted)">Two CSV files: sales rows, and a product list.</span></td>
+  <td><a href="/module/3/">Module 3</a></td>
+  <td><a class="btn btn-download" href="/datasets/sales-and-products.zip" download>⬇ sales-and-products.zip</a></td>
+</tr><tr>
+  <td><strong>Capstone superstore</strong><br>
+      <span style="color:var(--text-muted)">A fresh set of sales and product files to prove you can do it alone.</span></td>
+  <td><a href="/module/7/">Module 7</a></td>
+  <td><a class="btn btn-download" href="/datasets/capstone-superstore.zip" download>⬇ capstone-superstore.zip</a></td>
+</tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Belajar Power BI</h3>
+        <p>A free, beginner-first course that takes you from never opening
+        Power BI to publishing your first dashboard. Built by Dhany Indraswara.</p>
+        <p class="js-only" id="footerProgress"></p>
+      </div>
+      <div>
+        <h3>Course</h3>
+        <ul class="footer-links">
+          <li><a href="/curriculum/">Curriculum</a></li>
+          <li><a href="/downloads/">Downloads</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Settings</h3>
+        <ul class="footer-links">
+          <li><button type="button" class="reset-progress" id="resetProgress">Reset my progress</button></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.85rem;">Progress is stored in this
+        browser using localStorage. No cookies. No accounts. No tracking.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Belajar Power BI. Free to use and share.</span>
+      <span>Power BI is a product of Microsoft. This site is an independent tutorial.</span>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-screen image">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close full screen">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

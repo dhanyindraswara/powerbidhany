@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your first measure — Module 5 — Belajar Power BI</title>
+<meta name="description" content="Lesson: Your first measure. In about 13 minutes you will be able to write a Total Sales measure using SUM and show it on a card.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">bP</span>
+      <span>Belajar Power BI</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/curriculum/">Curriculum</a>
+      <a href="/downloads/">Downloads</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+<div class="first-visit" id="firstVisit" hidden>
+  <div class="container">
+    <span>Your progress is saved to this browser only — no account, no tracking.</span>
+    <button type="button" id="dismissFirstVisit">Got it</button>
+  </div>
+</div>
+<div class="mobile-progress">
+  <div class="container">
+    <span class="label" id="mobileProgressLabel">Progress</span>
+    <span class="bar"><span id="mobileProgressBar"></span></span>
+  </div>
+</div><main id="main">
+<div class="container">
+  <div class="lesson-layout">
+    <nav class="module-rail" aria-label="Course progress">
+  <h2>Your progress</h2>
+  <div class="rail-module"><div class="rail-module-title">Module 0</div><ul class="rail-lessons"><li><a href="/module/0/what-is-power-bi/" data-lesson-id="m0-what-is-power-bi"><span class="rail-state" aria-hidden="true"></span><span>What Power BI actually is</span></a></li><li><a href="/module/0/install-power-bi-desktop/" data-lesson-id="m0-install-power-bi-desktop"><span class="rail-state" aria-hidden="true"></span><span>Installing Power BI Desktop</span></a></li><li><a href="/module/0/tour-of-the-window/" data-lesson-id="m0-tour-of-the-window"><span class="rail-state" aria-hidden="true"></span><span>A tour of the Power BI Desktop window</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 1</div><ul class="rail-lessons"><li><a href="/module/1/understanding-data-sources/" data-lesson-id="m1-understanding-data-sources"><span class="rail-state" aria-hidden="true"></span><span>Where data comes from</span></a></li><li><a href="/module/1/import-your-first-file/" data-lesson-id="m1-import-your-first-file"><span class="rail-state" aria-hidden="true"></span><span>Import your first file</span></a></li><li><a href="/module/1/reading-the-load-screen/" data-lesson-id="m1-reading-the-load-screen"><span class="rail-state" aria-hidden="true"></span><span>Reading the load screen</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 2</div><ul class="rail-lessons"><li><a href="/module/2/what-is-power-query/" data-lesson-id="m2-what-is-power-query"><span class="rail-state" aria-hidden="true"></span><span>What Power Query is</span></a></li><li><a href="/module/2/remove-columns-and-rows/" data-lesson-id="m2-remove-columns-and-rows"><span class="rail-state" aria-hidden="true"></span><span>Remove columns and rows you don&#x27;t need</span></a></li><li><a href="/module/2/fix-data-types/" data-lesson-id="m2-fix-data-types"><span class="rail-state" aria-hidden="true"></span><span>Fix data types</span></a></li><li><a href="/module/2/close-and-apply/" data-lesson-id="m2-close-and-apply"><span class="rail-state" aria-hidden="true"></span><span>Split, replace, and close &amp; apply</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 3</div><ul class="rail-lessons"><li><a href="/module/3/what-is-a-data-model/" data-lesson-id="m3-what-is-a-data-model"><span class="rail-state" aria-hidden="true"></span><span>What a data model is</span></a></li><li><a href="/module/3/create-a-relationship/" data-lesson-id="m3-create-a-relationship"><span class="rail-state" aria-hidden="true"></span><span>Create a relationship</span></a></li><li><a href="/module/3/reading-the-model-view/" data-lesson-id="m3-reading-the-model-view"><span class="rail-state" aria-hidden="true"></span><span>Reading the Model view</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 4</div><ul class="rail-lessons"><li><a href="/module/4/your-first-chart/" data-lesson-id="m4-your-first-chart"><span class="rail-state" aria-hidden="true"></span><span>Your first chart</span></a></li><li><a href="/module/4/cards-tables-slicers/" data-lesson-id="m4-cards-tables-slicers"><span class="rail-state" aria-hidden="true"></span><span>Cards, tables, and slicers</span></a></li><li><a href="/module/4/formatting-and-layout/" data-lesson-id="m4-formatting-and-layout"><span class="rail-state" aria-hidden="true"></span><span>Formatting and layout</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 5</div><ul class="rail-lessons"><li><a href="/module/5/columns-vs-measures/" data-lesson-id="m5-columns-vs-measures"><span class="rail-state" aria-hidden="true"></span><span>Columns vs measures</span></a></li><li><a href="/module/5/your-first-measure/" data-lesson-id="m5-your-first-measure" aria-current="page"><span class="rail-state" aria-hidden="true"></span><span>Your first measure</span></a></li><li><a href="/module/5/useful-measures/" data-lesson-id="m5-useful-measures"><span class="rail-state" aria-hidden="true"></span><span>Count and average</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 6</div><ul class="rail-lessons"><li><a href="/module/6/sign-in-and-publish/" data-lesson-id="m6-sign-in-and-publish"><span class="rail-state" aria-hidden="true"></span><span>Sign in and publish</span></a></li><li><a href="/module/6/share-your-dashboard/" data-lesson-id="m6-share-your-dashboard"><span class="rail-state" aria-hidden="true"></span><span>Share your dashboard</span></a></li></ul></div><div class="rail-module"><div class="rail-module-title">Module 7</div><ul class="rail-lessons"><li><a href="/module/7/build-the-dashboard/" data-lesson-id="m7-build-the-dashboard"><span class="rail-state" aria-hidden="true"></span><span>Build the capstone dashboard</span></a></li><li><a href="/module/7/checklist-and-next-steps/" data-lesson-id="m7-checklist-and-next-steps"><span class="rail-state" aria-hidden="true"></span><span>Final checklist and where to go next</span></a></li></ul></div>
+</nav>
+    <article class="lesson-content" data-lesson-id="m5-your-first-measure">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/module/5/">Module 5</a></li>
+          <li aria-current="page">Your first measure</li>
+        </ol>
+      </nav>
+
+      <h1>Your first measure</h1>
+
+      <p class="outcome">In about 13 minutes you will be able to
+      write a Total Sales measure using SUM and show it on a card.<br>
+      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
+      13 menit kamu bakal bisa menulis measure Total Sales pakai SUM dan menampilkannya di card.</span></p>
+
+      <div class="meta-row">
+        <span class="meta-item">⏱ <strong>13 min</strong></span>
+        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
+        <span class="meta-item">✅ You need first: <strong>Sales table loaded.</strong></span>
+      </div>
+
+      <div class="dataset-cta">
+  <div class="ds-text">
+    <strong>Practice dataset: Sales and products</strong>
+    <span>The linked tables you already know. <span lang="id">/ Tabel terhubung yang sudah kamu kenal.</span></span>
+  </div>
+  <a class="btn btn-download" href="/datasets/sales-and-products.zip" download>⬇ Download dataset</a>
+</div>
+
+      <p>Time to write actual <span class='term' title='The small formula language used to write measures in Power BI. Stands for Data Analysis Expressions'>DAX</span> — Power BI's formula language. Your first one is three words long. Don't be scared.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Saatnya menulis DAX beneran — bahasa formula Power BI. Yang pertama cuma tiga kata. Jangan takut.</p>
+
+      <ol class="steps">
+        <li class="step">
+  <p>In the Fields pane, right-click the <strong>Sales</strong> table and choose <strong>New measure</strong>.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Di panel Fields, klik kanan tabel <strong>Sales</strong> dan pilih <strong>New measure</strong>.</p>
+  <p class="menu-path">Menu path: <span class="path">Right-click Sales table ▸ New measure</span></p>
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/new-measure.svg"
+    aria-label="The Fields pane right-click menu on the Sales table with New measure highlighted. (tap to open full screen)">
+    <img src="/assets/img/new-measure.svg" alt="The Fields pane right-click menu on the Sales table with New measure highlighted." loading="lazy" decoding="async">
+    <span class="callout" style="left:45%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:60%;top:60%;" aria-hidden="true">2</span>
+  </button>
+  <ol class="figure-legend"><li><span>Right-click the Sales table</span> <span lang="id" class="lang-id">· Klik kanan tabel Sales</span></li><li><span>Choose New measure</span> <span lang="id" class="lang-id">· Pilih New measure</span></li></ol>
+  
+</figure>
+</li><li class="step">
+  <p>A formula bar appears at the top. Type exactly: <code>Total Sales = SUM(Sales[Amount])</code></p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Formula bar muncul di atas. Ketik persis: <code>Total Sales = SUM(Sales[Amount])</code></p>
+  
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/measure-formula.svg"
+    aria-label="The DAX formula bar showing Total Sales = SUM(Sales[Amount]) being typed. (tap to open full screen)">
+    <img src="/assets/img/measure-formula.svg" alt="The DAX formula bar showing Total Sales = SUM(Sales[Amount]) being typed." loading="lazy" decoding="async">
+    <span class="callout" style="left:45%;top:35%;" aria-hidden="true">1</span><span class="callout" style="left:40%;top:55%;" aria-hidden="true">2</span>
+  </button>
+  <ol class="figure-legend"><li><span>The formula bar</span> <span lang="id" class="lang-id">· Formula bar</span></li><li><span>Type the measure here</span> <span lang="id" class="lang-id">· Ketik measure di sini</span></li></ol>
+  
+</figure>
+</li><li class="step">
+  <p>As you type <code>Sales[</code>, a suggestion list pops up. Pick <strong>Amount</strong> from it rather than typing the whole thing. Press Enter to finish.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Saat kamu mengetik <code>Sales[</code>, daftar saran muncul. Pilih <strong>Amount</strong> dari situ daripada mengetik semuanya. Tekan Enter untuk menyelesaikan.</p>
+  
+  
+</li><li class="step">
+  <p>Total Sales now appears in the Fields pane with a little calculator icon. Add a Card visual and tick Total Sales to see it.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Total Sales sekarang muncul di panel Fields dengan ikon kalkulator kecil. Tambah visual Card dan centang Total Sales untuk melihatnya.</p>
+  
+  
+</li>
+      </ol>
+
+      <div class="checkpoint">
+  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
+  <p>Total Sales sits in the Fields pane with a calculator icon, and a card shows the summed total. Add a product slicer and the total reacts.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">Total Sales ada di panel Fields dengan ikon kalkulator, dan card menampilkan total yang dijumlah. Tambah slicer produk dan totalnya bereaksi.</p>
+  <figure class="figure">
+  <button type="button" class="figure-frame" data-full="/assets/img/cp-measure-card.svg"
+    aria-label="A card showing the Total Sales measure result, with the measure visible in the Fields pane. (tap to open full screen)">
+    <img src="/assets/img/cp-measure-card.svg" alt="A card showing the Total Sales measure result, with the measure visible in the Fields pane." loading="lazy" decoding="async">
+    
+  </button>
+  
+  
+</figure>
+</div>
+
+      <div class="callout-block">
+        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
+        <p>SUM is the measure you'll write more than any other. Once you've written one measure, every other DAX formula is just a variation on the same shape.</p>
+<p lang="id" class="lang-id" style="color:var(--text-muted)">SUM adalah measure yang paling sering kamu tulis. Begitu kamu menulis satu measure, tiap formula DAX lain cuma variasi dari bentuk yang sama.</p>
+      </div>
+
+      <div class="callout-block">
+        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <ul class="mistakes">
+          <li><strong>Typing the column name instead of picking it</strong> <span lang="id">/ Mengetik nama kolom alih-alih memilihnya</span><br>One typo and the measure errors. Always choose from the suggestion list so the name is exact. <span lang="id" class="lang-id" style="color:var(--text-muted)">Satu typo dan measure-nya error. Selalu pilih dari daftar saran supaya namanya persis.</span></li><li><strong>Confusing New measure with New column</strong> <span lang="id">/ Bingung antara New measure dan New column</span><br>They sit next to each other in the menu. For totals you want New measure, every time. <span lang="id" class="lang-id" style="color:var(--text-muted)">Keduanya bersebelahan di menu. Untuk total kamu mau New measure, tiap saat.</span></li>
+        </ul>
+      </div>
+
+      <div class="lesson-actions">
+        <div class="complete-row">
+          <button type="button" class="btn btn-secondary mark-complete" id="markComplete"
+            data-lesson-id="m5-your-first-measure">Mark this lesson complete</button>
+          <span class="complete-state js-only" id="completeState"></span>
+        </div>
+        <a class="btn btn-primary next-step" href="/module/5/useful-measures/">Next: Count and average →</a>
+      </div>
+
+    </article>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Belajar Power BI</h3>
+        <p>A free, beginner-first course that takes you from never opening
+        Power BI to publishing your first dashboard. Built by Dhany Indraswara.</p>
+        <p class="js-only" id="footerProgress"></p>
+      </div>
+      <div>
+        <h3>Course</h3>
+        <ul class="footer-links">
+          <li><a href="/curriculum/">Curriculum</a></li>
+          <li><a href="/downloads/">Downloads</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Settings</h3>
+        <ul class="footer-links">
+          <li><button type="button" class="reset-progress" id="resetProgress">Reset my progress</button></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.85rem;">Progress is stored in this
+        browser using localStorage. No cookies. No accounts. No tracking.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Belajar Power BI. Free to use and share.</span>
+      <span>Power BI is a product of Microsoft. This site is an independent tutorial.</span>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-screen image">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close full screen">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>
