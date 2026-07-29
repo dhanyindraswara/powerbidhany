@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,64 +60,63 @@
 
       <h1>Count and average</h1>
 
-      <p class="outcome">In about 12 minutes you will be able to
-      write a count of orders and an average sale using the same pattern.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      12 menit kamu bakal bisa menulis jumlah order dan rata-rata penjualan pakai pola yang sama.</span></p>
+      <p class="outcome"><span class="lang-en">In about 12 minutes you will be able to write a count of orders and an average sale using the same pattern.</span><span class="lang-id" lang="id">Dalam sekitar 12 menit kamu bakal bisa menulis jumlah order dan rata-rata penjualan pakai pola yang sama.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>12 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Total Sales measure written.</strong></span>
+        <span class="meta-item">⏱ <strong>12 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Total Sales measure written.</span><span class="lang-id" lang="id">Measure Total Sales sudah ditulis.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Sales and products</strong>
-    <span>Continue in the same file. <span lang="id">/ Lanjut di file yang sama.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Sales and products</strong>
+    <span><span class="lang-en">Continue in the same file.</span><span class="lang-id" lang="id">Lanjut di file yang sama.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/sales-and-products.zip" download>⬇ Download dataset</a>
 </div>
 
-      <p>You know the shape now: <code>Name = FUNCTION(Table[Column])</code>. Swap SUM for COUNT or AVERAGE and you have two more measures in minutes.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu sudah tahu bentuknya: <code>Name = FUNCTION(Table[Column])</code>. Ganti SUM dengan COUNT atau AVERAGE dan kamu punya dua measure lagi dalam hitungan menit.</p>
+      <p class="lang-en">You know the shape now: <code>Name = FUNCTION(Table[Column])</code>. Swap SUM for COUNT or AVERAGE and you have two more measures in minutes.</p>
+<p class="lang-id" lang="id">Kamu sudah tahu bentuknya: <code>Name = FUNCTION(Table[Column])</code>. Ganti SUM dengan COUNT atau AVERAGE dan kamu punya dua measure lagi dalam hitungan menit.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>New measure again (right-click Sales ▸ New measure). Type: <code>Order Count = COUNT(Sales[Order ID])</code></p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">New measure lagi (klik kanan Sales ▸ New measure). Ketik: <code>Order Count = COUNT(Sales[Order ID])</code></p>
+  <p class="lang-en">New measure again (right-click Sales ▸ New measure). Type: <code>Order Count = COUNT(Sales[Order ID])</code></p>
+<p class="lang-id" lang="id">New measure lagi (klik kanan Sales ▸ New measure). Ketik: <code>Order Count = COUNT(Sales[Order ID])</code></p>
   <p class="menu-path">Menu path: <span class="path">Right-click Sales ▸ New measure</span></p>
   
 </li><li class="step">
-  <p>One more. New measure, then: <code>Average Sale = AVERAGE(Sales[Amount])</code></p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Satu lagi. New measure, lalu: <code>Average Sale = AVERAGE(Sales[Amount])</code></p>
+  <p class="lang-en">One more. New measure, then: <code>Average Sale = AVERAGE(Sales[Amount])</code></p>
+<p class="lang-id" lang="id">Satu lagi. New measure, lalu: <code>Average Sale = AVERAGE(Sales[Amount])</code></p>
   <p class="menu-path">Menu path: <span class="path">Right-click Sales ▸ New measure</span></p>
   
 </li><li class="step">
-  <p>Add three cards, one for each measure: Total Sales, Order Count, Average Sale. Now you have a headline row.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Tambah tiga card, satu untuk tiap measure: Total Sales, Order Count, Average Sale. Sekarang kamu punya baris angka utama.</p>
+  <p class="lang-en">Add three cards, one for each measure: Total Sales, Order Count, Average Sale. Now you have a headline row.</p>
+<p class="lang-id" lang="id">Tambah tiga card, satu untuk tiap measure: Total Sales, Order Count, Average Sale. Sekarang kamu punya baris angka utama.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/three-cards.svg"
     aria-label="Three cards in a row showing Total Sales, Order Count, and Average Sale. (tap to open full screen)">
     <img src="../../../assets/img/three-cards.svg" alt="Three cards in a row showing Total Sales, Order Count, and Average Sale." loading="lazy" decoding="async">
-    <span class="callout" style="left:18%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:50%;top:40%;" aria-hidden="true">2</span><span class="callout" style="left:82%;top:40%;" aria-hidden="true">3</span>
+    <span class="callout" style="left:17.7%;top:26%;" aria-hidden="true">1</span><span class="callout" style="left:36.7%;top:26%;" aria-hidden="true">2</span><span class="callout" style="left:55.7%;top:26%;" aria-hidden="true">3</span>
   </button>
-  <ol class="figure-legend"><li><span>Total Sales card</span> <span lang="id" class="lang-id">· Card Total Sales</span></li><li><span>Order Count card</span> <span lang="id" class="lang-id">· Card Order Count</span></li><li><span>Average Sale card</span> <span lang="id" class="lang-id">· Card Average Sale</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Total Sales card</span><span class="lang-id" lang="id">Card Total Sales</span></li><li><span class="lang-en">Order Count card</span><span class="lang-id" lang="id">Card Order Count</span></li><li><span class="lang-en">Average Sale card</span><span class="lang-id" lang="id">Card Average Sale</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Click a product in your slicer and watch all three cards recalculate at once. That's the power of measures.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik satu produk di slicer-mu dan lihat ketiga card menghitung ulang sekaligus. Itulah kekuatan measure.</p>
+  <p class="lang-en">Click a product in your slicer and watch all three cards recalculate at once. That's the power of measures.</p>
+<p class="lang-id" lang="id">Klik satu produk di slicer-mu dan lihat ketiga card menghitung ulang sekaligus. Itulah kekuatan measure.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>Three cards show a total, a count, and an average. Filtering with the slicer updates all three together.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Tiga card menampilkan total, jumlah, dan rata-rata. Memfilter dengan slicer memperbarui ketiganya bersamaan.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">Three cards show a total, a count, and an average. Filtering with the slicer updates all three together.</p>
+<p class="lang-id" lang="id">Tiga card menampilkan total, jumlah, dan rata-rata. Memfilter dengan slicer memperbarui ketiganya bersamaan.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-headline-row.svg"
     aria-label="A headline row of three measure cards above a bar chart. (tap to open full screen)">
@@ -126,15 +129,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>SUM, COUNT, and AVERAGE cover most of what a beginner dashboard needs. With these three you can already answer "how much, how many, and how big on average" — the questions every manager asks.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">SUM, COUNT, dan AVERAGE menutupi sebagian besar kebutuhan dashboard pemula. Dengan tiga ini kamu sudah bisa menjawab "berapa banyak, berapa jumlahnya, dan rata-rata berapa" — pertanyaan yang ditanyakan tiap manajer.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">SUM, COUNT, and AVERAGE cover most of what a beginner dashboard needs. With these three you can already answer "how much, how many, and how big on average" — the questions every manager asks.</p>
+<p class="lang-id" lang="id">SUM, COUNT, dan AVERAGE menutupi sebagian besar kebutuhan dashboard pemula. Dengan tiga ini kamu sudah bisa menjawab "berapa banyak, berapa jumlahnya, dan rata-rata berapa" — pertanyaan yang ditanyakan tiap manajer.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Using COUNT on a column with blanks</strong> <span lang="id">/ Memakai COUNT pada kolom yang ada kosongnya</span><br>COUNT skips blanks. Count an ID column that's always filled so the number is honest. <span lang="id" class="lang-id" style="color:var(--text-muted)">COUNT melewati yang kosong. Hitung kolom ID yang selalu terisi supaya angkanya jujur.</span></li><li><strong>Averaging something that shouldn&#x27;t be averaged</strong> <span lang="id">/ Merata-rata sesuatu yang nggak seharusnya</span><br>Average a value, not an ID. Averaging Order ID gives a meaningless number. <span lang="id" class="lang-id" style="color:var(--text-muted)">Rata-rata sebuah nilai, bukan ID. Merata-rata Order ID memberi angka yang nggak bermakna.</span></li>
+          <li><strong><span class="lang-en">Using COUNT on a column with blanks</span><span class="lang-id" lang="id">Memakai COUNT pada kolom yang ada kosongnya</span></strong><br><span class="lang-en">COUNT skips blanks. Count an ID column that's always filled so the number is honest.</span><span class="lang-id" lang="id">COUNT melewati yang kosong. Hitung kolom ID yang selalu terisi supaya angkanya jujur.</span></li><li><strong><span class="lang-en">Averaging something that shouldn&#x27;t be averaged</span><span class="lang-id" lang="id">Merata-rata sesuatu yang nggak seharusnya</span></strong><br><span class="lang-en">Average a value, not an ID. Averaging Order ID gives a meaningless number.</span><span class="lang-id" lang="id">Rata-rata sebuah nilai, bukan ID. Merata-rata Order ID memberi angka yang nggak bermakna.</span></li>
         </ul>
       </div>
 

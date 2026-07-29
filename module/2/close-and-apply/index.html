@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,72 +60,71 @@
 
       <h1>Split, replace, and close &amp; apply</h1>
 
-      <p class="outcome">In about 12 minutes you will be able to
-      replace a bad value, split a column, and load your cleaned data back into Power BI.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      12 menit kamu bakal bisa mengganti nilai yang salah, memecah kolom, dan memuat data bersihmu kembali ke Power BI.</span></p>
+      <p class="outcome"><span class="lang-en">In about 12 minutes you will be able to replace a bad value, split a column, and load your cleaned data back into Power BI.</span><span class="lang-id" lang="id">Dalam sekitar 12 menit kamu bakal bisa mengganti nilai yang salah, memecah kolom, dan memuat data bersihmu kembali ke Power BI.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>12 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Types fixed from the last lesson.</strong></span>
+        <span class="meta-item">⏱ <strong>12 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Types fixed from the last lesson.</span><span class="lang-id" lang="id">Tipe sudah diperbaiki dari pelajaran sebelumnya.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Messy orders</strong>
-    <span>Finish cleaning the same file. <span lang="id">/ Selesaikan pembersihan file yang sama.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Messy orders</strong>
+    <span><span class="lang-en">Finish cleaning the same file.</span><span class="lang-id" lang="id">Selesaikan pembersihan file yang sama.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/messy-orders.csv" download>⬇ Download dataset</a>
 </div>
 
-      <p>Two more everyday moves — replacing typos and splitting a crammed column — then we lock in all your work with Close & Apply.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Dua gerakan sehari-hari lagi — mengganti typo dan memecah kolom yang terlalu padat — lalu kita kunci semua kerjaanmu dengan Close & Apply.</p>
+      <p class="lang-en">Two more everyday moves — replacing typos and splitting a crammed column — then we lock in all your work with Close & Apply.</p>
+<p class="lang-id" lang="id">Dua gerakan sehari-hari lagi — mengganti typo dan memecah kolom yang terlalu padat — lalu kita kunci semua kerjaanmu dengan Close & Apply.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>The <strong>City</strong> column has "Jakata" misspelled. Right-click that column and choose <strong>Replace Values</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kolom <strong>City</strong> punya "Jakata" yang salah ketik. Klik kanan kolom itu dan pilih <strong>Replace Values</strong>.</p>
+  <p class="lang-en">The <strong>City</strong> column has "Jakata" misspelled. Right-click that column and choose <strong>Replace Values</strong>.</p>
+<p class="lang-id" lang="id">Kolom <strong>City</strong> punya "Jakata" yang salah ketik. Klik kanan kolom itu dan pilih <strong>Replace Values</strong>.</p>
   <p class="menu-path">Menu path: <span class="path">Right-click column ▸ Replace Values</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-replace.svg"
     aria-label="The Replace Values dialog in Power Query with a Value To Find box and a Replace With box. (tap to open full screen)">
     <img src="../../../assets/img/pq-replace.svg" alt="The Replace Values dialog in Power Query with a Value To Find box and a Replace With box." loading="lazy" decoding="async">
-    <span class="callout" style="left:35%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:35%;top:62%;" aria-hidden="true">2</span>
+    <span class="callout" style="left:43%;top:34.4%;" aria-hidden="true">1</span><span class="callout" style="left:43%;top:44.7%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>Value To Find: Jakata</span> <span lang="id" class="lang-id">· Value To Find: Jakata</span></li><li><span>Replace With: Jakarta</span> <span lang="id" class="lang-id">· Replace With: Jakarta</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Value To Find: Jakata</span><span class="lang-id" lang="id">Value To Find: Jakata</span></li><li><span class="lang-en">Replace With: Jakarta</span><span class="lang-id" lang="id">Replace With: Jakarta</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Type <code>Jakata</code> in "Value To Find" and <code>Jakarta</code> in "Replace With", then click OK.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Ketik <code>Jakata</code> di "Value To Find" dan <code>Jakarta</code> di "Replace With", lalu klik OK.</p>
+  <p class="lang-en">Type <code>Jakata</code> in "Value To Find" and <code>Jakarta</code> in "Replace With", then click OK.</p>
+<p class="lang-id" lang="id">Ketik <code>Jakata</code> di "Value To Find" dan <code>Jakarta</code> di "Replace With", lalu klik OK.</p>
   
   
 </li><li class="step">
-  <p>The <strong>Product</strong> column holds "Coffee - Latte" style values. Select it, then Home ▸ Split Column ▸ By Delimiter, choose the dash, and click OK.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kolom <strong>Product</strong> berisi nilai gaya "Coffee - Latte". Pilih kolomnya, lalu Home ▸ Split Column ▸ By Delimiter, pilih tanda strip, dan klik OK.</p>
+  <p class="lang-en">The <strong>Product</strong> column holds "Coffee - Latte" style values. Select it, then Home ▸ Split Column ▸ By Delimiter, choose the dash, and click OK.</p>
+<p class="lang-id" lang="id">Kolom <strong>Product</strong> berisi nilai gaya "Coffee - Latte". Pilih kolomnya, lalu Home ▸ Split Column ▸ By Delimiter, pilih tanda strip, dan klik OK.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Split Column ▸ By Delimiter</span></p>
   
 </li><li class="step">
-  <p>Happy with the data? On the Home tab click <strong>Close &amp; Apply</strong>. The editor closes and your clean data loads into Power BI.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sudah puas dengan datanya? Di tab Home klik <strong>Close &amp; Apply</strong>. Editor menutup dan data bersihmu masuk ke Power BI.</p>
+  <p class="lang-en">Happy with the data? On the Home tab click <strong>Close &amp; Apply</strong>. The editor closes and your clean data loads into Power BI.</p>
+<p class="lang-id" lang="id">Sudah puas dengan datanya? Di tab Home klik <strong>Close &amp; Apply</strong>. Editor menutup dan data bersihmu masuk ke Power BI.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Close & Apply</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-close-apply.svg"
     aria-label="The top-left of the Power Query Home ribbon with the Close &amp; Apply button highlighted. (tap to open full screen)">
     <img src="../../../assets/img/pq-close-apply.svg" alt="The top-left of the Power Query Home ribbon with the Close &amp; Apply button highlighted." loading="lazy" decoding="async">
-    <span class="callout" style="left:12%;top:30%;" aria-hidden="true">1</span>
+    <span class="callout-line" style="left:5.4%;top:30%;width:8.99%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:5.4%;top:30%;" aria-hidden="true">1</span>
   </button>
-  <ol class="figure-legend"><li><span>Close & Apply</span> <span lang="id" class="lang-id">· Close & Apply</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Close & Apply</span><span class="lang-id" lang="id">Close & Apply</span></li></ol>
   
 </figure>
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>You are back in the main Power BI window, the messy table now sits clean in the Fields pane, and a short "applying changes" bar flashed by.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu kembali ke jendela utama Power BI, tabel berantakan tadi sekarang bersih di panel Fields, dan bar "applying changes" singkat sempat lewat.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">You are back in the main Power BI window, the messy table now sits clean in the Fields pane, and a short "applying changes" bar flashed by.</p>
+<p class="lang-id" lang="id">Kamu kembali ke jendela utama Power BI, tabel berantakan tadi sekarang bersih di panel Fields, dan bar "applying changes" singkat sempat lewat.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-applied.svg"
     aria-label="The main Power BI window after Close &amp; Apply, with the cleaned orders table in the Fields pane. (tap to open full screen)">
@@ -134,15 +137,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>Replace and Split handle the two messiest things in real data: typos and squashed-together values. Close & Apply is the handshake that carries your recipe into the rest of Power BI.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Replace dan Split menangani dua hal paling berantakan di data asli: typo dan nilai yang menempel jadi satu. Close & Apply adalah jabat tangan yang membawa resepmu ke seluruh Power BI.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">Replace and Split handle the two messiest things in real data: typos and squashed-together values. Close & Apply is the handshake that carries your recipe into the rest of Power BI.</p>
+<p class="lang-id" lang="id">Replace dan Split menangani dua hal paling berantakan di data asli: typo dan nilai yang menempel jadi satu. Close & Apply adalah jabat tangan yang membawa resepmu ke seluruh Power BI.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Forgetting to click Close &amp; Apply</strong> <span lang="id">/ Lupa mengklik Close &amp; Apply</span><br>Your cleaning stays trapped in the editor until you apply it. No apply, no clean data in your charts. <span lang="id" class="lang-id" style="color:var(--text-muted)">Pembersihanmu terjebak di editor sampai kamu menerapkannya. Nggak apply, nggak ada data bersih di grafik.</span></li><li><strong>Splitting on the wrong character</strong> <span lang="id">/ Memecah pakai karakter yang salah</span><br>Match the delimiter to what's actually between your values — a dash, a space, or a comma. Preview before OK. <span lang="id" class="lang-id" style="color:var(--text-muted)">Cocokkan delimiter dengan yang benar-benar ada di antara nilaimu — strip, spasi, atau koma. Lihat pratinjau sebelum OK.</span></li>
+          <li><strong><span class="lang-en">Forgetting to click Close &amp; Apply</span><span class="lang-id" lang="id">Lupa mengklik Close &amp; Apply</span></strong><br><span class="lang-en">Your cleaning stays trapped in the editor until you apply it. No apply, no clean data in your charts.</span><span class="lang-id" lang="id">Pembersihanmu terjebak di editor sampai kamu menerapkannya. Nggak apply, nggak ada data bersih di grafik.</span></li><li><strong><span class="lang-en">Splitting on the wrong character</span><span class="lang-id" lang="id">Memecah pakai karakter yang salah</span></strong><br><span class="lang-en">Match the delimiter to what's actually between your values — a dash, a space, or a comma. Preview before OK.</span><span class="lang-id" lang="id">Cocokkan delimiter dengan yang benar-benar ada di antara nilaimu — strip, spasi, atau koma. Lihat pratinjau sebelum OK.</span></li>
         </ul>
       </div>
 

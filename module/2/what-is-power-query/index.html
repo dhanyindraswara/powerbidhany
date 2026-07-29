@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,59 +60,58 @@
 
       <h1>What Power Query is</h1>
 
-      <p class="outcome">In about 9 minutes you will be able to
-      open the Power Query Editor and understand that it records your steps.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      9 menit kamu bakal bisa membuka Power Query Editor dan paham bahwa dia merekam langkah-langkahmu.</span></p>
+      <p class="outcome"><span class="lang-en">In about 9 minutes you will be able to open the Power Query Editor and understand that it records your steps.</span><span class="lang-id" lang="id">Dalam sekitar 9 menit kamu bakal bisa membuka Power Query Editor dan paham bahwa dia merekam langkah-langkahmu.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>9 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Easy</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Module 1 finished.</strong></span>
+        <span class="meta-item">⏱ <strong>9 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Easy</span><span class="lang-id" lang="id">Gampang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Module 1 finished.</span><span class="lang-id" lang="id">Modul 1 sudah selesai.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Messy orders</strong>
-    <span>60 rows with blank cells, wrong types, and extra columns — deliberately messy. <span lang="id">/ 60 baris dengan sel kosong, tipe salah, dan kolom berlebih — sengaja dibikin berantakan.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Messy orders</strong>
+    <span><span class="lang-en">60 rows with blank cells, wrong types, and extra columns — deliberately messy.</span><span class="lang-id" lang="id">60 baris dengan sel kosong, tipe salah, dan kolom berlebih — sengaja dibikin berantakan.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/messy-orders.csv" download>⬇ Download dataset</a>
 </div>
 
-      <p><span class='term' title='The built-in editor inside Power BI where you clean and reshape data before it loads'>Power Query</span> is a room inside Power BI where you tidy data before it reaches your charts. Its superpower: it remembers every change as a step, so you can redo it on new data instantly.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Power Query adalah ruangan di dalam Power BI tempat kamu merapikan data sebelum sampai ke grafikmu. Kekuatannya: dia mengingat setiap perubahan sebagai langkah, jadi kamu bisa mengulanginya di data baru seketika.</p>
+      <p class="lang-en"><span class='term' title='The built-in editor inside Power BI where you clean and reshape data before it loads'>Power Query</span> is a room inside Power BI where you tidy data before it reaches your charts. Its superpower: it remembers every change as a step, so you can redo it on new data instantly.</p>
+<p class="lang-id" lang="id">Power Query adalah ruangan di dalam Power BI tempat kamu merapikan data sebelum sampai ke grafikmu. Kekuatannya: dia mengingat setiap perubahan sebagai langkah, jadi kamu bisa mengulanginya di data baru seketika.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Download <code>messy-orders.csv</code> above. Then Home ▸ Get data ▸ Text/CSV and pick it. This time, click <strong>Transform data</strong>, not Load.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Download <code>messy-orders.csv</code> di atas. Lalu Home ▸ Get data ▸ Text/CSV dan pilih file itu. Kali ini, klik <strong>Transform data</strong>, bukan Load.</p>
+  <p class="lang-en">Download <code>messy-orders.csv</code> above. Then Home ▸ Get data ▸ Text/CSV and pick it. This time, click <strong>Transform data</strong>, not Load.</p>
+<p class="lang-id" lang="id">Download <code>messy-orders.csv</code> di atas. Lalu Home ▸ Get data ▸ Text/CSV dan pilih file itu. Kali ini, klik <strong>Transform data</strong>, bukan Load.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Get data ▸ Text/CSV ▸ Transform data</span></p>
   
 </li><li class="step">
-  <p>The Power Query Editor opens in a new window. It looks like Power BI but greener. Your data fills the middle.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Power Query Editor terbuka di jendela baru. Tampilannya mirip Power BI tapi lebih hijau. Datamu mengisi bagian tengah.</p>
+  <p class="lang-en">The Power Query Editor opens in a new window. It looks like Power BI but greener. Your data fills the middle.</p>
+<p class="lang-id" lang="id">Power Query Editor terbuka di jendela baru. Tampilannya mirip Power BI tapi lebih hijau. Datamu mengisi bagian tengah.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-editor.svg"
     aria-label="The Power Query Editor window showing the data grid in the centre, the Queries list on the left, and the Applied Steps panel on the right. (tap to open full screen)">
     <img src="../../../assets/img/pq-editor.svg" alt="The Power Query Editor window showing the data grid in the centre, the Queries list on the left, and the Applied Steps panel on the right." loading="lazy" decoding="async">
-    <span class="callout-line" style="left:10%;top:40%;width:7%;transform:rotate(0deg);"></span><span class="callout" style="left:10%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:48%;top:45%;" aria-hidden="true">2</span><span class="callout" style="left:88%;top:40%;" aria-hidden="true">3</span>
+    <span class="callout-line" style="left:7.5%;top:32%;width:7%;transform:rotate(0deg);"></span><span class="callout" style="left:7.5%;top:32%;" aria-hidden="true">1</span><span class="callout" style="left:45%;top:45%;" aria-hidden="true">2</span><span class="callout" style="left:88%;top:33%;" aria-hidden="true">3</span>
   </button>
-  <ol class="figure-legend"><li><span>Queries — your tables</span> <span lang="id" class="lang-id">· Queries — tabel-tabelmu</span></li><li><span>The data grid</span> <span lang="id" class="lang-id">· Grid data</span></li><li><span>Applied Steps — every change recorded</span> <span lang="id" class="lang-id">· Applied Steps — tiap perubahan direkam</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Queries — your tables</span><span class="lang-id" lang="id">Queries — tabel-tabelmu</span></li><li><span class="lang-en">The data grid</span><span class="lang-id" lang="id">Grid data</span></li><li><span class="lang-en">Applied Steps — every change recorded</span><span class="lang-id" lang="id">Applied Steps — tiap perubahan direkam</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Look at the <strong>Applied Steps</strong> panel on the right. Power BI already added a few steps for you. Every future change adds another line here.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Lihat panel <strong>Applied Steps</strong> di kanan. Power BI sudah menambah beberapa langkah untukmu. Setiap perubahan berikutnya menambah satu baris di sini.</p>
+  <p class="lang-en">Look at the <strong>Applied Steps</strong> panel on the right. Power BI already added a few steps for you. Every future change adds another line here.</p>
+<p class="lang-id" lang="id">Lihat panel <strong>Applied Steps</strong> di kanan. Power BI sudah menambah beberapa langkah untukmu. Setiap perubahan berikutnya menambah satu baris di sini.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>You are inside the Power Query Editor, you can see the messy data, and you can find the Applied Steps list on the right.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu sudah di dalam Power Query Editor, bisa melihat data berantakannya, dan bisa menemukan daftar Applied Steps di kanan.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">You are inside the Power Query Editor, you can see the messy data, and you can find the Applied Steps list on the right.</p>
+<p class="lang-id" lang="id">Kamu sudah di dalam Power Query Editor, bisa melihat data berantakannya, dan bisa menemukan daftar Applied Steps di kanan.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-pq-open.svg"
     aria-label="The Power Query Editor open with the Applied Steps panel highlighted. (tap to open full screen)">
@@ -121,15 +124,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>In real jobs, the same messy report lands on your desk every month. Because Power Query records steps, you clean it once and replay the recipe forever. That is why it exists.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di dunia kerja, laporan berantakan yang sama mendarat di mejamu tiap bulan. Karena Power Query merekam langkah, kamu membersihkannya sekali lalu memutar ulang resepnya selamanya. Itu alasan dia ada.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">In real jobs, the same messy report lands on your desk every month. Because Power Query records steps, you clean it once and replay the recipe forever. That is why it exists.</p>
+<p class="lang-id" lang="id">Di dunia kerja, laporan berantakan yang sama mendarat di mejamu tiap bulan. Karena Power Query merekam langkah, kamu membersihkannya sekali lalu memutar ulang resepnya selamanya. Itu alasan dia ada.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Closing the editor with the X and losing steps</strong> <span lang="id">/ Menutup editor dengan X dan kehilangan langkah</span><br>Use Home ▸ Close & Apply to save your work. The window X can discard it. <span lang="id" class="lang-id" style="color:var(--text-muted)">Pakai Home ▸ Close & Apply untuk menyimpan kerjaanmu. Tombol X pada jendela bisa membuangnya.</span></li><li><strong>Thinking Power Query changes the original file</strong> <span lang="id">/ Mengira Power Query mengubah file aslinya</span><br>It never touches your CSV. All cleaning happens inside Power BI only. <span lang="id" class="lang-id" style="color:var(--text-muted)">Dia nggak pernah menyentuh file CSV-mu. Semua pembersihan terjadi di dalam Power BI saja.</span></li>
+          <li><strong><span class="lang-en">Closing the editor with the X and losing steps</span><span class="lang-id" lang="id">Menutup editor dengan X dan kehilangan langkah</span></strong><br><span class="lang-en">Use Home ▸ Close & Apply to save your work. The window X can discard it.</span><span class="lang-id" lang="id">Pakai Home ▸ Close & Apply untuk menyimpan kerjaanmu. Tombol X pada jendela bisa membuangnya.</span></li><li><strong><span class="lang-en">Thinking Power Query changes the original file</span><span class="lang-id" lang="id">Mengira Power Query mengubah file aslinya</span></strong><br><span class="lang-en">It never touches your CSV. All cleaning happens inside Power BI only.</span><span class="lang-id" lang="id">Dia nggak pernah menyentuh file CSV-mu. Semua pembersihan terjadi di dalam Power BI saja.</span></li>
         </ul>
       </div>
 

@@ -13,11 +13,13 @@ consistency far better than hand-copying 23 lesson pages ever could.
 """
 
 import os
+import math
 import re
 import html
 import zipfile
 import random
 
+import art
 from content import MODULES, SITE
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -60,6 +62,12 @@ def lesson_id(mod_n, slug):
 
 
 TOTAL_LESSONS = sum(len(m["lessons"]) for m in MODULES)
+
+DIFF_ID = {
+    "Very easy": "Sangat gampang",
+    "Easy": "Gampang",
+    "Medium": "Sedang",
+}
 
 
 def module_url(n):
@@ -107,6 +115,10 @@ def header(active=None):
       <a href="/curriculum/"{cls('curriculum')}>Curriculum</a>
       <a href="/downloads/"{cls('downloads')}>Downloads</a>
       <a href="/about/"{cls('about')}>About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -207,26 +219,51 @@ def render_figure(figure, is_checkpoint=False):
     """
     if not figure:
         return ""
+    # Where a marker must land is a property of the artwork, so the generated
+    # scene supplies the geometry when it has it; the legend wording always
+    # comes from content.py. Real screenshots fall back to the content x/y.
+    base = os.path.splitext(os.path.basename(figure["src"]))[0]
+    pts = art.anchors(base)
+    iw, ih = art.size(base)
     markers_html = []
-    for mk in figure["markers"]:
+    for i, mk in enumerate(figure["markers"]):
+        x, y = mk["x"], mk["y"]
+        target = None
+        if pts and i < len(pts) and pts[i]:
+            a = pts[i]
+            x, y = a[0], a[1]
+            if len(a) == 4:
+                target = (a[2], a[3])
         line = ""
-        if mk.get("line"):
+        if target:
+            # Offset marker + connector: work in pixels so the angle is right
+            # for the image's aspect ratio, then express length back as a
+            # percentage of width (which is how the CSS sizes it).
+            dx = (target[0] - x) / 100.0 * iw
+            dy = (target[1] - y) / 100.0 * ih
+            length = math.hypot(dx, dy)
+            angle = math.degrees(math.atan2(dy, dx))
+            line = (
+                f'<span class="callout-line" style="left:{x}%;top:{y}%;'
+                f'width:{length / iw * 100:.2f}%;transform:rotate({angle:.1f}deg);"'
+                f'></span>'
+            )
+        elif mk.get("line"):
             ang = mk["line"].get("angle", 0)
             ln = mk["line"].get("len", 6)
             line = (
-                f'<span class="callout-line" style="left:{mk["x"]}%;top:{mk["y"]}%;'
+                f'<span class="callout-line" style="left:{x}%;top:{y}%;'
                 f'width:{ln}%;transform:rotate({ang}deg);"></span>'
             )
         markers_html.append(line)
         markers_html.append(
-            f'<span class="callout" style="left:{mk["x"]}%;top:{mk["y"]}%;" '
+            f'<span class="callout" style="left:{x}%;top:{y}%;" '
             f'aria-hidden="true">{mk["n"]}</span>'
         )
     legend_html = ""
     if figure["markers"]:
         items = "".join(
-            f'<li><span>{mk["text_en"]}</span> '
-            f'<span lang="id" class="lang-id">· {mk["text_id"]}</span></li>'
+            f'<li>{bi(mk["text_en"], mk["text_id"])}</li>'
             for mk in figure["markers"]
         )
         legend_html = f'<ol class="figure-legend">{items}</ol>'
@@ -247,10 +284,19 @@ def render_figure(figure, is_checkpoint=False):
 
 
 def bil(en, idt):
-    """Render a bilingual paragraph pair (English then Bahasa Indonesia)."""
+    """A bilingual block. Both languages are in the HTML so the page reads fine
+    with JavaScript off; the language toggle simply hides one of them."""
     return (
-        f'<p>{en}</p>\n'
-        f'<p lang="id" class="lang-id" style="color:var(--text-muted)">{idt}</p>'
+        f'<p class="lang-en">{en}</p>\n'
+        f'<p class="lang-id" lang="id">{idt}</p>'
+    )
+
+
+def bi(en, idt):
+    """Inline bilingual pair, for use inside a sentence, heading or button."""
+    return (
+        f'<span class="lang-en">{en}</span>'
+        f'<span class="lang-id" lang="id">{idt}</span>'
     )
 
 
@@ -295,15 +341,15 @@ def render_lesson(mod, les, prev_link, next_link):
         ds = les["dataset"]
         dataset_html = f"""<div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: {html.escape(ds['name'])}</strong>
-    <span>{ds['desc_en']} <span lang="id">/ {ds['desc_id']}</span></span>
+    <strong>{bi('Practice dataset', 'Dataset latihan')}: {html.escape(ds['name'])}</strong>
+    <span>{bi(ds['desc_en'], ds['desc_id'])}</span>
   </div>
   <a class="btn btn-download" href="/datasets/{ds['file']}" download>⬇ Download dataset</a>
 </div>"""
     else:
-        dataset_html = """<div class="notice">
-  <strong>No download needed.</strong> This is a reading lesson —
-  just follow along. <span lang="id">Nggak perlu download apa-apa, cukup dibaca.</span>
+        dataset_html = f"""<div class="notice">
+  {bi('<strong>No download needed.</strong> This is a reading lesson — just follow along.',
+      '<strong>Nggak perlu download apa-apa.</strong> Ini pelajaran bacaan — ikuti aja santai.')}
 </div>"""
 
     # 5. numbered steps
@@ -323,17 +369,20 @@ def render_lesson(mod, les, prev_link, next_link):
 
     # 6. checkpoint (highlight colour used here and only here)
     checkpoint_html = f"""<div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
+  <h3><span aria-hidden="true">✓</span>
+    {bi('Checkpoint — you should now see this',
+        'Checkpoint — sekarang kamu harusnya lihat ini')}</h3>
   {bil(les['checkpoint_en'], les['checkpoint_id'])}
   {render_figure(les.get('checkpoint_image'), is_checkpoint=True)}
 </div>"""
 
     # 8. common mistakes
     mistakes_items = "".join(
-        f"<li><strong>{html.escape(mk['title_en'])}</strong> "
-        f'<span lang="id">/ {html.escape(mk["title_id"])}</span><br>'
-        f'{mk["text_en"]} '
-        f'<span lang="id" class="lang-id" style="color:var(--text-muted)">{mk["text_id"]}</span></li>'
+        "<li><strong>"
+        + bi(html.escape(mk["title_en"]), html.escape(mk["title_id"]))
+        + "</strong><br>"
+        + bi(mk["text_en"], mk["text_id"])
+        + "</li>"
         for mk in les["mistakes"]
     )
 
@@ -353,15 +402,15 @@ def render_lesson(mod, les, prev_link, next_link):
 
       <h1>{html.escape(les['title'])}</h1>
 
-      <p class="outcome">In about {les['minutes']} minutes you will be able to
-      {les['outcome_en']}<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      {les['minutes']} menit kamu bakal bisa {les['outcome_id']}</span></p>
+      <p class="outcome">{bi(
+        f"In about {les['minutes']} minutes you will be able to {les['outcome_en']}",
+        f"Dalam sekitar {les['minutes']} menit kamu bakal bisa {les['outcome_id']}")}</p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>{les['minutes']} min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>{difficulty}</strong></span>
-        <span class="meta-item">✅ You need first: <strong>{html.escape(les['need_first_en'])}</strong></span>
+        <span class="meta-item">⏱ <strong>{les['minutes']} {bi('min', 'menit')}</strong></span>
+        <span class="meta-item">{bi('Difficulty', 'Tingkat')}: <strong>{bi(difficulty, DIFF_ID.get(difficulty, difficulty))}</strong></span>
+        <span class="meta-item">{bi('You need first', 'Butuh dulu')}:
+          <strong>{bi(html.escape(les['need_first_en']), html.escape(les['need_first_id']))}</strong></span>
       </div>
 
       {dataset_html}
@@ -375,12 +424,12 @@ def render_lesson(mod, les, prev_link, next_link):
       {checkpoint_html}
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
+        <h3>{bi('Why this matters', 'Kenapa ini penting')}</h3>
         {bil(les['why_en'], les['why_id'])}
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3>{bi('Common mistakes', 'Kesalahan yang sering terjadi')}</h3>
         <ul class="mistakes">
           {mistakes_items}
         </ul>
@@ -516,9 +565,12 @@ def render_home():
       </div>
     </div>
     <div class="notice" style="margin-top:24px">
-      <strong>You'll read on any device, but you practise on a Windows laptop.</strong>
-      Power BI Desktop only runs on Windows. Browse the lessons on your phone; do the
-      exercises on a computer. <span lang="id">Baca di HP boleh, tapi latihannya di laptop Windows, ya.</span>
+      {bi("<strong>You'll read on any device, but you practise on a Windows laptop.</strong> "
+          "Power BI Desktop only runs on Windows. Browse the lessons on your phone; do the "
+          "exercises on a computer.",
+          "<strong>Baca di mana aja boleh, tapi latihannya di laptop Windows.</strong> "
+          "Power BI Desktop cuma jalan di Windows. Baca pelajarannya di HP, tapi "
+          "latihannya kerjakan di komputer, ya.")}
     </div>
   </div>
 </section>
@@ -765,6 +817,40 @@ def render_app_js():
 
   var KEY = "pbi-progress-v1";
   var SEEN = "pbi-seen-explainer-v1";
+  var LANG = "pbi-lang-v1";
+
+  /* ---- reading language (Bahasa Indonesia by default) ----
+     Both languages are present in the HTML; this only chooses which to show,
+     so with JS disabled the reader still gets everything. */
+  function applyLang(l) {
+    document.documentElement.setAttribute("data-lang", l);
+    document.documentElement.lang = (l === "id") ? "id" : "en";
+    var btns = document.querySelectorAll(".lang-switch button[data-lang]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute("aria-pressed",
+        btns[i].getAttribute("data-lang") === l ? "true" : "false");
+    }
+  }
+
+  function initLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(LANG); } catch (e) {}
+    if (saved !== "en" && saved !== "id") {
+      /* Default follows the browser, falling back to Bahasa Indonesia
+         because that is who this course is written for. */
+      var nav = (navigator.language || "id").toLowerCase();
+      saved = nav.indexOf("en") === 0 ? "en" : "id";
+    }
+    applyLang(saved);
+    var sw = document.querySelectorAll(".lang-switch button[data-lang]");
+    for (var i = 0; i < sw.length; i++) {
+      sw[i].addEventListener("click", function () {
+        var l = this.getAttribute("data-lang");
+        applyLang(l);
+        try { localStorage.setItem(LANG, l); } catch (e) {}
+      });
+    }
+  }
 
   function getDone() {
     try { return JSON.parse(localStorage.getItem(KEY)) || []; }
@@ -932,6 +1018,7 @@ def render_app_js():
     });
   }
 
+  initLang();
   initFirstVisit();
   paintRail();
   paintMobileProgress();
@@ -1138,11 +1225,17 @@ def main():
 
     # images
     write("assets/img/favicon.svg", render_favicon())
+    missing = []
     for src, alt in collect_images().items():
         rel = src.lstrip("/")
-        # title = last path segment prettified
-        name = os.path.splitext(os.path.basename(src))[0].replace("-", " ")
-        write(rel, svg_mock(name, []))
+        base = os.path.splitext(os.path.basename(src))[0]
+        drawing = art.render(base)
+        if drawing is None:
+            missing.append(base)
+            drawing = svg_mock(base.replace("-", " "), [])
+        write(rel, drawing)
+    if missing:
+        print("  ! no artwork for:", ", ".join(missing))
 
     # datasets
     build_datasets()

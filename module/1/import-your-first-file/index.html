@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,85 +60,84 @@
 
       <h1>Import your first file</h1>
 
-      <p class="outcome">In about 12 minutes you will be able to
-      load a CSV file into Power BI and see its rows appear.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      12 menit kamu bakal bisa memuat file CSV ke Power BI dan melihat baris-barisnya muncul.</span></p>
+      <p class="outcome"><span class="lang-en">In about 12 minutes you will be able to load a CSV file into Power BI and see its rows appear.</span><span class="lang-id" lang="id">Dalam sekitar 12 menit kamu bakal bisa memuat file CSV ke Power BI dan melihat baris-barisnya muncul.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>12 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Easy</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Power BI Desktop open. Download the dataset below.</strong></span>
+        <span class="meta-item">⏱ <strong>12 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Easy</span><span class="lang-id" lang="id">Gampang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Power BI Desktop open. Download the dataset below.</span><span class="lang-id" lang="id">Power BI Desktop terbuka. Download dataset di bawah.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Coffee shop sales</strong>
-    <span>90 rows of pretend sales from a small coffee shop. <span lang="id">/ 90 baris penjualan pura-pura dari kedai kopi kecil.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Coffee shop sales</strong>
+    <span><span class="lang-en">90 rows of pretend sales from a small coffee shop.</span><span class="lang-id" lang="id">90 baris penjualan pura-pura dari kedai kopi kecil.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/coffee-sales.csv" download>⬇ Download dataset</a>
 </div>
 
-      <p>Time to bring real data in. Download the coffee shop file above, remember where it saves (usually your Downloads folder), and follow along.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Saatnya masukin data asli. Download file kedai kopi di atas, ingat di mana dia tersimpan (biasanya folder Downloads), lalu ikuti langkahnya.</p>
+      <p class="lang-en">Time to bring real data in. Download the coffee shop file above, remember where it saves (usually your Downloads folder), and follow along.</p>
+<p class="lang-id" lang="id">Saatnya masukin data asli. Download file kedai kopi di atas, ingat di mana dia tersimpan (biasanya folder Downloads), lalu ikuti langkahnya.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>On the Home tab of the ribbon, click <strong>Get data</strong>. A menu drops down.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di tab Home pada ribbon, klik <strong>Get data</strong>. Menu akan turun.</p>
+  <p class="lang-en">On the Home tab of the ribbon, click <strong>Get data</strong>. A menu drops down.</p>
+<p class="lang-id" lang="id">Di tab Home pada ribbon, klik <strong>Get data</strong>. Menu akan turun.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Get data</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/getdata-button.svg"
     aria-label="The Home ribbon of Power BI Desktop with the Get data button highlighted near the left. (tap to open full screen)">
     <img src="../../../assets/img/getdata-button.svg" alt="The Home ribbon of Power BI Desktop with the Get data button highlighted near the left." loading="lazy" decoding="async">
-    <span class="callout" style="left:14%;top:22%;" aria-hidden="true">1</span>
+    <span class="callout-line" style="left:9.2%;top:27%;width:6.94%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:9.2%;top:27%;" aria-hidden="true">1</span>
   </button>
-  <ol class="figure-legend"><li><span>The Get data button on the Home tab</span> <span lang="id" class="lang-id">· Tombol Get data di tab Home</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The Get data button on the Home tab</span><span class="lang-id" lang="id">Tombol Get data di tab Home</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Choose <strong>Text/CSV</strong> from the list. If you don't see it, click <em>More…</em> and search for it.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Pilih <strong>Text/CSV</strong> dari daftar. Kalau nggak kelihatan, klik <em>More…</em> lalu cari.</p>
+  <p class="lang-en">Choose <strong>Text/CSV</strong> from the list. If you don't see it, click <em>More…</em> and search for it.</p>
+<p class="lang-id" lang="id">Pilih <strong>Text/CSV</strong> dari daftar. Kalau nggak kelihatan, klik <em>More…</em> lalu cari.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Get data ▸ Text/CSV</span></p>
   
 </li><li class="step">
-  <p>A file browser opens. Find <code>coffee-sales.csv</code> in your Downloads folder, click it once, then click <strong>Open</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Jendela pencari file terbuka. Temukan <code>coffee-sales.csv</code> di folder Downloads, klik sekali, lalu klik <strong>Open</strong>.</p>
+  <p class="lang-en">A file browser opens. Find <code>coffee-sales.csv</code> in your Downloads folder, click it once, then click <strong>Open</strong>.</p>
+<p class="lang-id" lang="id">Jendela pencari file terbuka. Temukan <code>coffee-sales.csv</code> di folder Downloads, klik sekali, lalu klik <strong>Open</strong>.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/file-browser.svg"
     aria-label="A file open dialog showing the coffee-sales.csv file selected in the Downloads folder. (tap to open full screen)">
     <img src="../../../assets/img/file-browser.svg" alt="A file open dialog showing the coffee-sales.csv file selected in the Downloads folder." loading="lazy" decoding="async">
-    <span class="callout" style="left:40%;top:45%;" aria-hidden="true">1</span><span class="callout" style="left:82%;top:88%;" aria-hidden="true">2</span>
+    <span class="callout" style="left:63%;top:27.9%;" aria-hidden="true">1</span><span class="callout-line" style="left:80%;top:79%;width:2.48%;transform:rotate(90.0deg);"></span><span class="callout" style="left:80%;top:79%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>The coffee-sales.csv file</span> <span lang="id" class="lang-id">· File coffee-sales.csv</span></li><li><span>The Open button</span> <span lang="id" class="lang-id">· Tombol Open</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The coffee-sales.csv file</span><span class="lang-id" lang="id">File coffee-sales.csv</span></li><li><span class="lang-en">The Open button</span><span class="lang-id" lang="id">Tombol Open</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>A preview window appears showing your table. Look it over — this is your data. Don't touch the settings at the top yet.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Muncul jendela pratinjau yang menampilkan tabelmu. Perhatikan dulu — ini datamu. Jangan sentuh pengaturan di atas dulu.</p>
+  <p class="lang-en">A preview window appears showing your table. Look it over — this is your data. Don't touch the settings at the top yet.</p>
+<p class="lang-id" lang="id">Muncul jendela pratinjau yang menampilkan tabelmu. Perhatikan dulu — ini datamu. Jangan sentuh pengaturan di atas dulu.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/csv-preview.svg"
     aria-label="The CSV import preview window showing columns for Date, Product, Quantity, and Price with a Load button at the bottom right. (tap to open full screen)">
     <img src="../../../assets/img/csv-preview.svg" alt="The CSV import preview window showing columns for Date, Product, Quantity, and Price with a Load button at the bottom right." loading="lazy" decoding="async">
-    <span class="callout" style="left:45%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:80%;top:90%;" aria-hidden="true">2</span>
+    <span class="callout" style="left:50%;top:45%;" aria-hidden="true">1</span><span class="callout-line" style="left:72.4%;top:82%;width:2.17%;transform:rotate(90.0deg);"></span><span class="callout" style="left:72.4%;top:82%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>A preview of your rows and columns</span> <span lang="id" class="lang-id">· Pratinjau baris dan kolommu</span></li><li><span>The Load button</span> <span lang="id" class="lang-id">· Tombol Load</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">A preview of your rows and columns</span><span class="lang-id" lang="id">Pratinjau baris dan kolommu</span></li><li><span class="lang-en">The Load button</span><span class="lang-id" lang="id">Tombol Load</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Click the blue <strong>Load</strong> button at the bottom right. Power BI pulls the data in.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik tombol biru <strong>Load</strong> di kanan bawah. Power BI menarik datanya masuk.</p>
+  <p class="lang-en">Click the blue <strong>Load</strong> button at the bottom right. Power BI pulls the data in.</p>
+<p class="lang-id" lang="id">Klik tombol biru <strong>Load</strong> di kanan bawah. Power BI menarik datanya masuk.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>In the Fields pane on the right you should now see <strong>coffee-sales</strong> with a small triangle you can expand to reveal the column names.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di panel Fields sebelah kanan sekarang harusnya muncul <strong>coffee-sales</strong> dengan segitiga kecil yang bisa kamu buka untuk memperlihatkan nama-nama kolom.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">In the Fields pane on the right you should now see <strong>coffee-sales</strong> with a small triangle you can expand to reveal the column names.</p>
+<p class="lang-id" lang="id">Di panel Fields sebelah kanan sekarang harusnya muncul <strong>coffee-sales</strong> dengan segitiga kecil yang bisa kamu buka untuk memperlihatkan nama-nama kolom.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-fields-loaded.svg"
     aria-label="The Fields pane now showing the coffee-sales table expanded to reveal Date, Product, Quantity, and Price columns. (tap to open full screen)">
@@ -147,15 +150,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>This is the single most-used action in all of Power BI. You will click Get data at the start of every project for the rest of your career. Get comfortable with it now.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Ini aksi yang paling sering dipakai di seluruh Power BI. Kamu bakal klik Get data di awal tiap proyek sepanjang kariermu. Nyamanin diri sama ini sekarang.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">This is the single most-used action in all of Power BI. You will click Get data at the start of every project for the rest of your career. Get comfortable with it now.</p>
+<p class="lang-id" lang="id">Ini aksi yang paling sering dipakai di seluruh Power BI. Kamu bakal klik Get data di awal tiap proyek sepanjang kariermu. Nyamanin diri sama ini sekarang.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Clicking Transform data instead of Load</strong> <span lang="id">/ Mengklik Transform data padahal maunya Load</span><br>Both buttons are on the preview screen. For now click Load. Transform opens a whole editor you meet in Module 2. <span lang="id" class="lang-id" style="color:var(--text-muted)">Kedua tombol ada di layar pratinjau. Untuk sekarang klik Load. Transform membuka editor lengkap yang kamu temui di Modul 2.</span></li><li><strong>Losing track of where the file downloaded</strong> <span lang="id">/ Lupa di mana file ter-download</span><br>If you can't find the file, check your browser's downloads list — it shows the exact folder. <span lang="id" class="lang-id" style="color:var(--text-muted)">Kalau nggak nemu file-nya, cek daftar unduhan di browser — di situ ada folder persisnya.</span></li>
+          <li><strong><span class="lang-en">Clicking Transform data instead of Load</span><span class="lang-id" lang="id">Mengklik Transform data padahal maunya Load</span></strong><br><span class="lang-en">Both buttons are on the preview screen. For now click Load. Transform opens a whole editor you meet in Module 2.</span><span class="lang-id" lang="id">Kedua tombol ada di layar pratinjau. Untuk sekarang klik Load. Transform membuka editor lengkap yang kamu temui di Modul 2.</span></li><li><strong><span class="lang-en">Losing track of where the file downloaded</span><span class="lang-id" lang="id">Lupa di mana file ter-download</span></strong><br><span class="lang-en">If you can't find the file, check your browser's downloads list — it shows the exact folder.</span><span class="lang-id" lang="id">Kalau nggak nemu file-nya, cek daftar unduhan di browser — di situ ada folder persisnya.</span></li>
         </ul>
       </div>
 

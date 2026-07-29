@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,72 +60,71 @@
 
       <h1>Your first chart</h1>
 
-      <p class="outcome">In about 12 minutes you will be able to
-      build a bar chart showing sales by product.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      12 menit kamu bakal bisa membuat bar chart yang menampilkan penjualan per produk.</span></p>
+      <p class="outcome"><span class="lang-en">In about 12 minutes you will be able to build a bar chart showing sales by product.</span><span class="lang-id" lang="id">Dalam sekitar 12 menit kamu bakal bisa membuat bar chart yang menampilkan penjualan per produk.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>12 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Easy</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Module 3 finished, tables loaded and linked.</strong></span>
+        <span class="meta-item">⏱ <strong>12 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Easy</span><span class="lang-id" lang="id">Gampang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Module 3 finished, tables loaded and linked.</span><span class="lang-id" lang="id">Modul 3 selesai, tabel dimuat dan terhubung.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Sales and products</strong>
-    <span>The linked tables from Module 3. <span lang="id">/ Tabel terhubung dari Modul 3.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Sales and products</strong>
+    <span><span class="lang-en">The linked tables from Module 3.</span><span class="lang-id" lang="id">Tabel terhubung dari Modul 3.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/sales-and-products.zip" download>⬇ Download dataset</a>
 </div>
 
-      <p>This is the moment it clicks. In three drags you'll turn your numbers into a bar chart. Switch to Report view (the top icon on the left edge) first.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Ini momen semuanya ngeklik. Dalam tiga tarikan kamu mengubah angkamu jadi bar chart. Pindah ke Report view dulu (ikon paling atas di tepi kiri).</p>
+      <p class="lang-en">This is the moment it clicks. In three drags you'll turn your numbers into a bar chart. Switch to Report view (the top icon on the left edge) first.</p>
+<p class="lang-id" lang="id">Ini momen semuanya ngeklik. Dalam tiga tarikan kamu mengubah angkamu jadi bar chart. Pindah ke Report view dulu (ikon paling atas di tepi kiri).</p>
 
       <ol class="steps">
         <li class="step">
-  <p>In the Visualizations pane, click the <strong>Clustered bar chart</strong> icon. An empty chart box appears on the canvas.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di panel Visualizations, klik ikon <strong>Clustered bar chart</strong>. Kotak grafik kosong muncul di canvas.</p>
+  <p class="lang-en">In the Visualizations pane, click the <strong>Clustered bar chart</strong> icon. An empty chart box appears on the canvas.</p>
+<p class="lang-id" lang="id">Di panel Visualizations, klik ikon <strong>Clustered bar chart</strong>. Kotak grafik kosong muncul di canvas.</p>
   <p class="menu-path">Menu path: <span class="path">Visualizations pane ▸ Clustered bar chart</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/vis-pick-bar.svg"
     aria-label="The Visualizations pane with the clustered bar chart icon highlighted among the chart type icons. (tap to open full screen)">
     <img src="../../../assets/img/vis-pick-bar.svg" alt="The Visualizations pane with the clustered bar chart icon highlighted among the chart type icons." loading="lazy" decoding="async">
-    <span class="callout" style="left:50%;top:20%;" aria-hidden="true">1</span><span class="callout" style="left:30%;top:60%;" aria-hidden="true">2</span>
+    <span class="callout-line" style="left:76%;top:20.5%;width:5.18%;transform:rotate(134.1deg);"></span><span class="callout" style="left:76%;top:20.5%;" aria-hidden="true">1</span><span class="callout" style="left:37%;top:50%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>The clustered bar chart icon</span> <span lang="id" class="lang-id">· Ikon clustered bar chart</span></li><li><span>The empty chart appears here</span> <span lang="id" class="lang-id">· Grafik kosong muncul di sini</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The clustered bar chart icon</span><span class="lang-id" lang="id">Ikon clustered bar chart</span></li><li><span class="lang-en">The empty chart appears here</span><span class="lang-id" lang="id">Grafik kosong muncul di sini</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>In the Fields pane, tick <strong>Product Name</strong> from the Products table. It drops into the chart's Y-axis.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di panel Fields, centang <strong>Product Name</strong> dari tabel Products. Dia masuk ke Y-axis grafik.</p>
+  <p class="lang-en">In the Fields pane, tick <strong>Product Name</strong> from the Products table. It drops into the chart's Y-axis.</p>
+<p class="lang-id" lang="id">Di panel Fields, centang <strong>Product Name</strong> dari tabel Products. Dia masuk ke Y-axis grafik.</p>
   
   
 </li><li class="step">
-  <p>Now tick <strong>Amount</strong> from the Sales table. Bars appear instantly, one per product.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang centang <strong>Amount</strong> dari tabel Sales. Batang langsung muncul, satu per produk.</p>
+  <p class="lang-en">Now tick <strong>Amount</strong> from the Sales table. Bars appear instantly, one per product.</p>
+<p class="lang-id" lang="id">Sekarang centang <strong>Amount</strong> dari tabel Sales. Batang langsung muncul, satu per produk.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/vis-bar-built.svg"
     aria-label="A finished clustered bar chart on the canvas showing one bar per product, with Product Name on the axis and Amount as the value. (tap to open full screen)">
     <img src="../../../assets/img/vis-bar-built.svg" alt="A finished clustered bar chart on the canvas showing one bar per product, with Product Name on the axis and Amount as the value." loading="lazy" decoding="async">
-    <span class="callout" style="left:45%;top:45%;" aria-hidden="true">1</span><span class="callout" style="left:80%;top:30%;" aria-hidden="true">2</span><span class="callout" style="left:80%;top:55%;" aria-hidden="true">3</span>
+    <span class="callout" style="left:37%;top:50%;" aria-hidden="true">1</span><span class="callout-line" style="left:76%;top:20.5%;width:5.18%;transform:rotate(134.1deg);"></span><span class="callout" style="left:76%;top:20.5%;" aria-hidden="true">2</span><span class="callout-line" style="left:76%;top:50%;width:1.95%;transform:rotate(39.6deg);"></span><span class="callout" style="left:76%;top:50%;" aria-hidden="true">3</span>
   </button>
-  <ol class="figure-legend"><li><span>One bar per product</span> <span lang="id" class="lang-id">· Satu batang per produk</span></li><li><span>Product Name is on the axis</span> <span lang="id" class="lang-id">· Product Name di sumbu</span></li><li><span>Amount is the value</span> <span lang="id" class="lang-id">· Amount jadi nilainya</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">One bar per product</span><span class="lang-id" lang="id">Satu batang per produk</span></li><li><span class="lang-en">Product Name is on the axis</span><span class="lang-id" lang="id">Product Name di sumbu</span></li><li><span class="lang-en">Amount is the value</span><span class="lang-id" lang="id">Amount jadi nilainya</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Notice this worked across two tables: names from Products, amounts from Sales. That's your relationship doing its job.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Perhatikan ini bekerja lintas dua tabel: nama dari Products, jumlah dari Sales. Itu relationship-mu sedang bekerja.</p>
+  <p class="lang-en">Notice this worked across two tables: names from Products, amounts from Sales. That's your relationship doing its job.</p>
+<p class="lang-id" lang="id">Perhatikan ini bekerja lintas dua tabel: nama dari Products, jumlah dari Sales. Itu relationship-mu sedang bekerja.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>A horizontal bar chart sits on your canvas with a labelled bar for each product, longest bar for the best seller.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Bar chart horizontal ada di canvas-mu dengan batang berlabel untuk tiap produk, batang terpanjang untuk yang paling laku.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">A horizontal bar chart sits on your canvas with a labelled bar for each product, longest bar for the best seller.</p>
+<p class="lang-id" lang="id">Bar chart horizontal ada di canvas-mu dengan batang berlabel untuk tiap produk, batang terpanjang untuk yang paling laku.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-first-chart.svg"
     aria-label="A completed bar chart of Amount by Product Name on the report canvas. (tap to open full screen)">
@@ -134,15 +137,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>The tick-a-field, get-a-chart loop is how you'll build every visual from now on. Once this feels natural, the whole tool opens up.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Loop centang-field, dapat-grafik adalah cara kamu membangun setiap visual mulai sekarang. Begitu ini terasa alami, seluruh tool-nya terbuka.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">The tick-a-field, get-a-chart loop is how you'll build every visual from now on. Once this feels natural, the whole tool opens up.</p>
+<p class="lang-id" lang="id">Loop centang-field, dapat-grafik adalah cara kamu membangun setiap visual mulai sekarang. Begitu ini terasa alami, seluruh tool-nya terbuka.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Ticking a field with no chart selected</strong> <span lang="id">/ Mencentang field tanpa grafik terpilih</span><br>Power BI makes a brand-new visual instead of filling yours. Click your chart first, then tick fields. <span lang="id" class="lang-id" style="color:var(--text-muted)">Power BI membuat visual baru alih-alih mengisi punyamu. Klik grafikmu dulu, baru centang field.</span></li><li><strong>Putting a text field where a number belongs</strong> <span lang="id">/ Menaruh field teks di tempat angka</span><br>Amount must be a number (Module 2). If bars don't appear, check that its type isn't stuck as text. <span lang="id" class="lang-id" style="color:var(--text-muted)">Amount harus angka (Modul 2). Kalau batang nggak muncul, cek tipenya jangan sampai nyangkut jadi teks.</span></li>
+          <li><strong><span class="lang-en">Ticking a field with no chart selected</span><span class="lang-id" lang="id">Mencentang field tanpa grafik terpilih</span></strong><br><span class="lang-en">Power BI makes a brand-new visual instead of filling yours. Click your chart first, then tick fields.</span><span class="lang-id" lang="id">Power BI membuat visual baru alih-alih mengisi punyamu. Klik grafikmu dulu, baru centang field.</span></li><li><strong><span class="lang-en">Putting a text field where a number belongs</span><span class="lang-id" lang="id">Menaruh field teks di tempat angka</span></strong><br><span class="lang-en">Amount must be a number (Module 2). If bars don't appear, check that its type isn't stuck as text.</span><span class="lang-id" lang="id">Amount harus angka (Modul 2). Kalau batang nggak muncul, cek tipenya jangan sampai nyangkut jadi teks.</span></li>
         </ul>
       </div>
 

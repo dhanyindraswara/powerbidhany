@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,59 +60,58 @@
 
       <h1>What a data model is</h1>
 
-      <p class="outcome">In about 9 minutes you will be able to
-      explain why you keep facts and descriptions in separate tables.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      9 menit kamu bakal bisa menjelaskan kenapa kamu memisahkan fakta dan deskripsi ke tabel yang berbeda.</span></p>
+      <p class="outcome"><span class="lang-en">In about 9 minutes you will be able to explain why you keep facts and descriptions in separate tables.</span><span class="lang-id" lang="id">Dalam sekitar 9 menit kamu bakal bisa menjelaskan kenapa kamu memisahkan fakta dan deskripsi ke tabel yang berbeda.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>9 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Module 2 finished.</strong></span>
+        <span class="meta-item">⏱ <strong>9 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Module 2 finished.</span><span class="lang-id" lang="id">Modul 2 sudah selesai.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Sales and products</strong>
-    <span>Two CSV files: sales rows, and a product list. <span lang="id">/ Dua file CSV: baris penjualan, dan daftar produk.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Sales and products</strong>
+    <span><span class="lang-en">Two CSV files: sales rows, and a product list.</span><span class="lang-id" lang="id">Dua file CSV: baris penjualan, dan daftar produk.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/sales-and-products.zip" download>⬇ Download dataset</a>
 </div>
 
-      <p>A <span class='term' title='The set of tables in your report plus the connections between them'>data model</span> is just your tables plus the links between them. The big idea: keep the things that repeat (product names, prices) in their own small table.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Data model itu cuma tabel-tabelmu plus hubungan di antaranya. Ide besarnya: simpan hal yang berulang (nama produk, harga) di tabel kecilnya sendiri.</p>
+      <p class="lang-en">A <span class='term' title='The set of tables in your report plus the connections between them'>data model</span> is just your tables plus the links between them. The big idea: keep the things that repeat (product names, prices) in their own small table.</p>
+<p class="lang-id" lang="id">Data model itu cuma tabel-tabelmu plus hubungan di antaranya. Ide besarnya: simpan hal yang berulang (nama produk, harga) di tabel kecilnya sendiri.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Picture a sales table with 10,000 rows. Writing the full product name on every row wastes space and invites typos.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Bayangkan tabel penjualan dengan 10.000 baris. Menulis nama produk lengkap di tiap baris memboroskan ruang dan mengundang typo.</p>
+  <p class="lang-en">Picture a sales table with 10,000 rows. Writing the full product name on every row wastes space and invites typos.</p>
+<p class="lang-id" lang="id">Bayangkan tabel penjualan dengan 10.000 baris. Menulis nama produk lengkap di tiap baris memboroskan ruang dan mengundang typo.</p>
   
   
 </li><li class="step">
-  <p>Instead, the sales table stores a short <strong>Product ID</strong>, and a separate small <strong>Products</strong> table stores the ID plus its full name and price. One name, stored once.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sebagai gantinya, tabel penjualan menyimpan <strong>Product ID</strong> pendek, dan tabel kecil terpisah <strong>Products</strong> menyimpan ID plus nama lengkap dan harganya. Satu nama, disimpan sekali.</p>
+  <p class="lang-en">Instead, the sales table stores a short <strong>Product ID</strong>, and a separate small <strong>Products</strong> table stores the ID plus its full name and price. One name, stored once.</p>
+<p class="lang-id" lang="id">Sebagai gantinya, tabel penjualan menyimpan <strong>Product ID</strong> pendek, dan tabel kecil terpisah <strong>Products</strong> menyimpan ID plus nama lengkap dan harganya. Satu nama, disimpan sekali.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/model-two-tables.svg"
     aria-label="Two tables side by side: a large Sales table with a Product ID column, and a small Products table with Product ID, Name, and Price, joined by a line between the matching ID columns. (tap to open full screen)">
     <img src="../../../assets/img/model-two-tables.svg" alt="Two tables side by side: a large Sales table with a Product ID column, and a small Products table with Product ID, Name, and Price, joined by a line between the matching ID columns." loading="lazy" decoding="async">
-    <span class="callout" style="left:22%;top:45%;" aria-hidden="true">1</span><span class="callout" style="left:78%;top:45%;" aria-hidden="true">2</span><span class="callout" style="left:50%;top:45%;" aria-hidden="true">3</span>
+    <span class="callout" style="left:21%;top:15%;" aria-hidden="true">1</span><span class="callout" style="left:79%;top:15%;" aria-hidden="true">2</span><span class="callout" style="left:50%;top:27%;" aria-hidden="true">3</span>
   </button>
-  <ol class="figure-legend"><li><span>Sales table — many rows, uses Product ID</span> <span lang="id" class="lang-id">· Tabel Sales — banyak baris, pakai Product ID</span></li><li><span>Products table — one row per product</span> <span lang="id" class="lang-id">· Tabel Products — satu baris per produk</span></li><li><span>The link joins them on Product ID</span> <span lang="id" class="lang-id">· Hubungan menyatukan lewat Product ID</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Sales table — many rows, uses Product ID</span><span class="lang-id" lang="id">Tabel Sales — banyak baris, pakai Product ID</span></li><li><span class="lang-en">Products table — one row per product</span><span class="lang-id" lang="id">Tabel Products — satu baris per produk</span></li><li><span class="lang-en">The link joins them on Product ID</span><span class="lang-id" lang="id">Hubungan menyatukan lewat Product ID</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>The line joining them on Product ID is a <span class='term' title='A link that tells Power BI how two tables match up, usually on a shared ID column'>relationship</span>. It lets a chart from one table use names from the other.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Garis yang menyatukan keduanya lewat Product ID adalah relationship. Ini memungkinkan grafik dari satu tabel memakai nama dari tabel lain.</p>
+  <p class="lang-en">The line joining them on Product ID is a <span class='term' title='A link that tells Power BI how two tables match up, usually on a shared ID column'>relationship</span>. It lets a chart from one table use names from the other.</p>
+<p class="lang-id" lang="id">Garis yang menyatukan keduanya lewat Product ID adalah relationship. Ini memungkinkan grafik dari satu tabel memakai nama dari tabel lain.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>You can explain: facts go in one table, the descriptions they point to go in another, and a relationship links them by a shared ID.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu bisa menjelaskan: fakta masuk ke satu tabel, deskripsi yang dirujuknya masuk ke tabel lain, dan relationship menyatukan lewat ID bersama.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">You can explain: facts go in one table, the descriptions they point to go in another, and a relationship links them by a shared ID.</p>
+<p class="lang-id" lang="id">Kamu bisa menjelaskan: fakta masuk ke satu tabel, deskripsi yang dirujuknya masuk ke tabel lain, dan relationship menyatukan lewat ID bersama.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-model-idea.svg"
     aria-label="A simple diagram of a facts table linked to a descriptions table by a shared ID. (tap to open full screen)">
@@ -121,15 +124,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>Almost every real Power BI report has several tables linked this way. Understanding the idea now means the Model view won't feel like a tangle of spaghetti later.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Hampir semua report Power BI asli punya beberapa tabel yang terhubung begini. Paham idenya sekarang berarti Model view nggak bakal terasa kayak seporsi spageti kusut nanti.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">Almost every real Power BI report has several tables linked this way. Understanding the idea now means the Model view won't feel like a tangle of spaghetti later.</p>
+<p class="lang-id" lang="id">Hampir semua report Power BI asli punya beberapa tabel yang terhubung begini. Paham idenya sekarang berarti Model view nggak bakal terasa kayak seporsi spageti kusut nanti.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Cramming everything into one giant table</strong> <span lang="id">/ Menjejalkan semua ke satu tabel raksasa</span><br>It works for tiny data but breaks down fast. Separate tables keep things clean and fast. <span lang="id" class="lang-id" style="color:var(--text-muted)">Itu jalan buat data kecil tapi cepat ambruk. Tabel terpisah menjaga semuanya bersih dan cepat.</span></li><li><strong>Expecting the link to appear by magic</strong> <span lang="id">/ Berharap hubungan muncul dengan ajaib</span><br>Sometimes Power BI guesses relationships, sometimes you make them yourself. You'll do that next lesson. <span lang="id" class="lang-id" style="color:var(--text-muted)">Kadang Power BI menebak relationship, kadang kamu yang membuatnya sendiri. Kamu melakukannya di pelajaran berikutnya.</span></li>
+          <li><strong><span class="lang-en">Cramming everything into one giant table</span><span class="lang-id" lang="id">Menjejalkan semua ke satu tabel raksasa</span></strong><br><span class="lang-en">It works for tiny data but breaks down fast. Separate tables keep things clean and fast.</span><span class="lang-id" lang="id">Itu jalan buat data kecil tapi cepat ambruk. Tabel terpisah menjaga semuanya bersih dan cepat.</span></li><li><strong><span class="lang-en">Expecting the link to appear by magic</span><span class="lang-id" lang="id">Berharap hubungan muncul dengan ajaib</span></strong><br><span class="lang-en">Sometimes Power BI guesses relationships, sometimes you make them yourself. You'll do that next lesson.</span><span class="lang-id" lang="id">Kadang Power BI menebak relationship, kadang kamu yang membuatnya sendiri. Kamu melakukannya di pelajaran berikutnya.</span></li>
         </ul>
       </div>
 

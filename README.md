@@ -37,6 +37,7 @@ never having opened Power BI to publishing their first dashboard. Bilingual
 │   └── capstone-superstore.zip
 ├── scripts/                        DEV ONLY — not served, not required to deploy
 │   ├── content.py                  All curriculum content, as structured data
+│   ├── art.py                      Draws the Power BI UI screenshots as SVG
 │   └── generate.py                 Renders the static site from that content
 ├── README.md
 └── NOTES.md                        Assumptions and open questions
@@ -152,12 +153,64 @@ For each figure the component (`render_figure` in `generate.py`) outputs:
    and carries both languages.
 4. The `alt` text you supplied, on the `<img>`, for screen-reader users.
 
-### Swapping in real screenshots
+### Where the marker geometry comes from
 
-Replace the placeholder SVGs in `assets/img/` with the real (unannotated)
-Power BI Desktop captures, keeping the same file names — or point the `fig(...)`
-`src` at new files. Then adjust each marker's `x`/`y` percentage to land on the
-right UI element and re-run `generate.py`. No page markup changes.
+Marker positions live in `scripts/art.py` (`ANCHORS`), because *where* a callout
+must land is a property of the artwork, while the legend wording is content. An
+anchor is either:
+
+```python
+(x, y)               # marker sits on the element
+(x, y, tx, ty)       # marker sits clear at (x, y), connector drawn to (tx, ty)
+```
+
+The four-value form is used for small controls — a ribbon button, the Sign in
+link — so the numbered circle never covers the thing it points at. The connector
+angle is computed in pixel space from the image's real aspect ratio, so it stays
+correct at every screen width.
+
+If an image has no `ANCHORS` entry, the `x`/`y` you gave in `content.py` is used
+instead.
+
+---
+
+## Screenshot artwork
+
+`scripts/art.py` draws every screenshot as a clean, light-mode SVG mock of the
+real Power BI UI: the ribbon with its actual command names, the view rail, the
+Visualizations and Fields panes, the Power Query Editor with Applied Steps,
+Model view with relationship cardinality, the CSV import dialog, the Microsoft
+Store, and the browser-based Power BI Service.
+
+Scenes are keyed by image file name in the `SCENES` registry, so adding or
+changing a picture is a one-line change. SVG keeps every page tiny and every
+label crisp at any zoom.
+
+### Swapping in real captures
+
+Replace the SVGs in `assets/img/` with real (unannotated) Power BI Desktop
+screenshots, keeping the same file names — or point the `fig(...)` `src` at new
+files. Then delete that image's `ANCHORS` entry in `art.py` and set each
+marker's `x`/`y` in `content.py` to land on the right UI element. No page markup
+changes.
+
+---
+
+## Language toggle
+
+Interface chrome stays in English. Tutorial content is written in both English
+and casual Bahasa Indonesia, and an **ID / EN** switch in the header chooses
+which one to read.
+
+- Both languages are always present in the HTML. The toggle only sets
+  `data-lang` on `<html>`, and CSS hides the other one — so with JavaScript
+  disabled the reader still gets *everything*, nothing is lost.
+- The choice is remembered in `localStorage` (`pbi-lang-v1`) and applies across
+  every page.
+- The default follows the browser's language, falling back to Bahasa Indonesia,
+  because that is who this course is written for.
+- Power BI's own menu names stay in English in both languages, so learners can
+  always find them in the app.
 
 ---
 

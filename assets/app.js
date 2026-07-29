@@ -9,6 +9,40 @@
 
   var KEY = "pbi-progress-v1";
   var SEEN = "pbi-seen-explainer-v1";
+  var LANG = "pbi-lang-v1";
+
+  /* ---- reading language (Bahasa Indonesia by default) ----
+     Both languages are present in the HTML; this only chooses which to show,
+     so with JS disabled the reader still gets everything. */
+  function applyLang(l) {
+    document.documentElement.setAttribute("data-lang", l);
+    document.documentElement.lang = (l === "id") ? "id" : "en";
+    var btns = document.querySelectorAll(".lang-switch button[data-lang]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute("aria-pressed",
+        btns[i].getAttribute("data-lang") === l ? "true" : "false");
+    }
+  }
+
+  function initLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(LANG); } catch (e) {}
+    if (saved !== "en" && saved !== "id") {
+      /* Default follows the browser, falling back to Bahasa Indonesia
+         because that is who this course is written for. */
+      var nav = (navigator.language || "id").toLowerCase();
+      saved = nav.indexOf("en") === 0 ? "en" : "id";
+    }
+    applyLang(saved);
+    var sw = document.querySelectorAll(".lang-switch button[data-lang]");
+    for (var i = 0; i < sw.length; i++) {
+      sw[i].addEventListener("click", function () {
+        var l = this.getAttribute("data-lang");
+        applyLang(l);
+        try { localStorage.setItem(LANG, l); } catch (e) {}
+      });
+    }
+  }
 
   function getDone() {
     try { return JSON.parse(localStorage.getItem(KEY)) || []; }
@@ -176,6 +210,7 @@
     });
   }
 
+  initLang();
   initFirstVisit();
   paintRail();
   paintMobileProgress();

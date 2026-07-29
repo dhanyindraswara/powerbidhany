@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,72 +60,71 @@
 
       <h1>Create a relationship</h1>
 
-      <p class="outcome">In about 12 minutes you will be able to
-      join two tables in Model view by dragging one ID onto another.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      12 menit kamu bakal bisa menyatukan dua tabel di Model view dengan menyeret satu ID ke ID lainnya.</span></p>
+      <p class="outcome"><span class="lang-en">In about 12 minutes you will be able to join two tables in Model view by dragging one ID onto another.</span><span class="lang-id" lang="id">Dalam sekitar 12 menit kamu bakal bisa menyatukan dua tabel di Model view dengan menyeret satu ID ke ID lainnya.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>12 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Both tables loaded (sales and products).</strong></span>
+        <span class="meta-item">⏱ <strong>12 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Both tables loaded (sales and products).</span><span class="lang-id" lang="id">Kedua tabel sudah dimuat (sales dan products).</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Sales and products</strong>
-    <span>Load both CSV files before you start. <span lang="id">/ Muat kedua file CSV sebelum mulai.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Sales and products</strong>
+    <span><span class="lang-en">Load both CSV files before you start.</span><span class="lang-id" lang="id">Muat kedua file CSV sebelum mulai.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/sales-and-products.zip" download>⬇ Download dataset</a>
 </div>
 
-      <p>Now we connect the two tables for real. It's a single drag, done in the Model view.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang kita hubungkan kedua tabel beneran. Cuma satu tarikan, dilakukan di Model view.</p>
+      <p class="lang-en">Now we connect the two tables for real. It's a single drag, done in the Model view.</p>
+<p class="lang-id" lang="id">Sekarang kita hubungkan kedua tabel beneran. Cuma satu tarikan, dilakukan di Model view.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Click the <strong>Model view</strong> icon, the third icon on the far left edge (it looks like connected boxes).</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik ikon <strong>Model view</strong>, ikon ketiga di tepi paling kiri (bentuknya seperti kotak yang terhubung).</p>
+  <p class="lang-en">Click the <strong>Model view</strong> icon, the third icon on the far left edge (it looks like connected boxes).</p>
+<p class="lang-id" lang="id">Klik ikon <strong>Model view</strong>, ikon ketiga di tepi paling kiri (bentuknya seperti kotak yang terhubung).</p>
   <p class="menu-path">Menu path: <span class="path">Left edge ▸ Model view</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/model-view-icon.svg"
     aria-label="The three view icons on the left edge of Power BI with the third Model view icon highlighted. (tap to open full screen)">
     <img src="../../../assets/img/model-view-icon.svg" alt="The three view icons on the left edge of Power BI with the third Model view icon highlighted." loading="lazy" decoding="async">
-    <span class="callout" style="left:30%;top:55%;" aria-hidden="true">1</span>
+    <span class="callout-line" style="left:8.5%;top:70%;width:24.23%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:8.5%;top:70%;" aria-hidden="true">1</span>
   </button>
-  <ol class="figure-legend"><li><span>The Model view icon (third one)</span> <span lang="id" class="lang-id">· Ikon Model view (yang ketiga)</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The Model view icon (third one)</span><span class="lang-id" lang="id">Ikon Model view (yang ketiga)</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>You see both tables as boxes with their column names. If a line already joins them, Power BI guessed the relationship — you're done, skip to the checkpoint.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu lihat kedua tabel sebagai kotak berisi nama kolom. Kalau sudah ada garis yang menyatukan, Power BI sudah menebak relationship — selesai, lompat ke checkpoint.</p>
+  <p class="lang-en">You see both tables as boxes with their column names. If a line already joins them, Power BI guessed the relationship — you're done, skip to the checkpoint.</p>
+<p class="lang-id" lang="id">Kamu lihat kedua tabel sebagai kotak berisi nama kolom. Kalau sudah ada garis yang menyatukan, Power BI sudah menebak relationship — selesai, lompat ke checkpoint.</p>
   
   
 </li><li class="step">
-  <p>If there's no line, drag <strong>Product ID</strong> from the Sales box and drop it onto <strong>Product ID</strong> in the Products box.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kalau nggak ada garis, seret <strong>Product ID</strong> dari kotak Sales dan jatuhkan ke <strong>Product ID</strong> di kotak Products.</p>
+  <p class="lang-en">If there's no line, drag <strong>Product ID</strong> from the Sales box and drop it onto <strong>Product ID</strong> in the Products box.</p>
+<p class="lang-id" lang="id">Kalau nggak ada garis, seret <strong>Product ID</strong> dari kotak Sales dan jatuhkan ke <strong>Product ID</strong> di kotak Products.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/model-drag.svg"
     aria-label="Two table boxes in Model view with an arrow showing Product ID being dragged from the Sales table onto Product ID in the Products table. (tap to open full screen)">
     <img src="../../../assets/img/model-drag.svg" alt="Two table boxes in Model view with an arrow showing Product ID being dragged from the Sales table onto Product ID in the Products table." loading="lazy" decoding="async">
-    <span class="callout" style="left:25%;top:60%;" aria-hidden="true">1</span><span class="callout" style="left:75%;top:40%;" aria-hidden="true">2</span>
+    <span class="callout" style="left:22%;top:40.5%;" aria-hidden="true">1</span><span class="callout" style="left:74%;top:30%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>Drag Product ID from Sales</span> <span lang="id" class="lang-id">· Seret Product ID dari Sales</span></li><li><span>Drop it on Product ID in Products</span> <span lang="id" class="lang-id">· Jatuhkan di Product ID di Products</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Drag Product ID from Sales</span><span class="lang-id" lang="id">Seret Product ID dari Sales</span></li><li><span class="lang-en">Drop it on Product ID in Products</span><span class="lang-id" lang="id">Jatuhkan di Product ID di Products</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>A line now connects the two boxes. That line is your relationship. Hover it and it highlights the two linked columns.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang garis menghubungkan kedua kotak. Garis itu relationship-mu. Arahkan kursor ke garis dan dia menyorot dua kolom yang terhubung.</p>
+  <p class="lang-en">A line now connects the two boxes. That line is your relationship. Hover it and it highlights the two linked columns.</p>
+<p class="lang-id" lang="id">Sekarang garis menghubungkan kedua kotak. Garis itu relationship-mu. Arahkan kursor ke garis dan dia menyorot dua kolom yang terhubung.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>A single line runs between the Sales and Products boxes, connecting their Product ID columns.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Satu garis membentang antara kotak Sales dan Products, menghubungkan kolom Product ID mereka.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">A single line runs between the Sales and Products boxes, connecting their Product ID columns.</p>
+<p class="lang-id" lang="id">Satu garis membentang antara kotak Sales dan Products, menghubungkan kolom Product ID mereka.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-relationship.svg"
     aria-label="Two tables in Model view joined by a single relationship line between their Product ID columns. (tap to open full screen)">
@@ -134,15 +137,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>This one line is what lets you build a chart of sales totals broken down by product name — even though sales and names live in different tables. It's the quiet engine under every good report.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Satu garis ini yang memungkinkan kamu membuat grafik total penjualan dipecah per nama produk — padahal penjualan dan nama ada di tabel berbeda. Ini mesin senyap di balik setiap report yang bagus.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">This one line is what lets you build a chart of sales totals broken down by product name — even though sales and names live in different tables. It's the quiet engine under every good report.</p>
+<p class="lang-id" lang="id">Satu garis ini yang memungkinkan kamu membuat grafik total penjualan dipecah per nama produk — padahal penjualan dan nama ada di tabel berbeda. Ini mesin senyap di balik setiap report yang bagus.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Dragging the wrong columns together</strong> <span lang="id">/ Menyeret kolom yang salah</span><br>Always join ID to matching ID. Joining Name to Price makes a broken, meaningless link. <span lang="id" class="lang-id" style="color:var(--text-muted)">Selalu satukan ID ke ID yang cocok. Menyatukan Name ke Price membuat hubungan rusak yang nggak bermakna.</span></li><li><strong>Making two relationships between the same tables</strong> <span lang="id">/ Membuat dua relationship antara tabel yang sama</span><br>You usually want just one active line. If you see a dotted extra line, delete it by clicking and pressing Delete. <span lang="id" class="lang-id" style="color:var(--text-muted)">Biasanya kamu cuma mau satu garis aktif. Kalau ada garis putus-putus tambahan, hapus dengan klik lalu tekan Delete.</span></li>
+          <li><strong><span class="lang-en">Dragging the wrong columns together</span><span class="lang-id" lang="id">Menyeret kolom yang salah</span></strong><br><span class="lang-en">Always join ID to matching ID. Joining Name to Price makes a broken, meaningless link.</span><span class="lang-id" lang="id">Selalu satukan ID ke ID yang cocok. Menyatukan Name ke Price membuat hubungan rusak yang nggak bermakna.</span></li><li><strong><span class="lang-en">Making two relationships between the same tables</span><span class="lang-id" lang="id">Membuat dua relationship antara tabel yang sama</span></strong><br><span class="lang-en">You usually want just one active line. If you see a dotted extra line, delete it by clicking and pressing Delete.</span><span class="lang-id" lang="id">Biasanya kamu cuma mau satu garis aktif. Kalau ada garis putus-putus tambahan, hapus dengan klik lalu tekan Delete.</span></li>
         </ul>
       </div>
 

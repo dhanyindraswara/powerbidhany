@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,56 +60,54 @@
 
       <h1>Reading the Model view</h1>
 
-      <p class="outcome">In about 8 minutes you will be able to
-      read the little symbols on a relationship line and know your tables are connected the normal way.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      8 menit kamu bakal bisa membaca simbol kecil di garis relationship dan tahu tabelmu terhubung dengan cara yang normal.</span></p>
+      <p class="outcome"><span class="lang-en">In about 8 minutes you will be able to read the little symbols on a relationship line and know your tables are connected the normal way.</span><span class="lang-id" lang="id">Dalam sekitar 8 menit kamu bakal bisa membaca simbol kecil di garis relationship dan tahu tabelmu terhubung dengan cara yang normal.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>8 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Easy</strong></span>
-        <span class="meta-item">✅ You need first: <strong>A relationship created from the last lesson.</strong></span>
+        <span class="meta-item">⏱ <strong>8 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Easy</span><span class="lang-id" lang="id">Gampang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">A relationship created from the last lesson.</span><span class="lang-id" lang="id">Relationship sudah dibuat dari pelajaran sebelumnya.</span></strong></span>
       </div>
 
       <div class="notice">
-  <strong>No download needed.</strong> This is a reading lesson —
-  just follow along. <span lang="id">Nggak perlu download apa-apa, cukup dibaca.</span>
+  <span class="lang-en"><strong>No download needed.</strong> This is a reading lesson — just follow along.</span><span class="lang-id" lang="id"><strong>Nggak perlu download apa-apa.</strong> Ini pelajaran bacaan — ikuti aja santai.</span>
 </div>
 
-      <p>That line has tiny symbols at each end. You don't need to master them, but recognising the normal, healthy pattern gives you confidence.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Garis itu punya simbol kecil di tiap ujung. Kamu nggak perlu menguasainya, tapi mengenali pola normal yang sehat bikin kamu pede.</p>
+      <p class="lang-en">That line has tiny symbols at each end. You don't need to master them, but recognising the normal, healthy pattern gives you confidence.</p>
+<p class="lang-id" lang="id">Garis itu punya simbol kecil di tiap ujung. Kamu nggak perlu menguasainya, tapi mengenali pola normal yang sehat bikin kamu pede.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Hover the relationship line. One end shows a <strong>1</strong>, the other shows an asterisk <strong>*</strong>. This is the normal one-to-many pattern.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Arahkan kursor ke garis relationship. Satu ujung menunjukkan <strong>1</strong>, ujung lain menunjukkan tanda bintang <strong>*</strong>. Ini pola one-to-many yang normal.</p>
+  <p class="lang-en">Hover the relationship line. One end shows a <strong>1</strong>, the other shows an asterisk <strong>*</strong>. This is the normal one-to-many pattern.</p>
+<p class="lang-id" lang="id">Arahkan kursor ke garis relationship. Satu ujung menunjukkan <strong>1</strong>, ujung lain menunjukkan tanda bintang <strong>*</strong>. Ini pola one-to-many yang normal.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/model-cardinality.svg"
     aria-label="A relationship line between two tables showing a 1 on the Products end and an asterisk on the Sales end. (tap to open full screen)">
     <img src="../../../assets/img/model-cardinality.svg" alt="A relationship line between two tables showing a 1 on the Products end and an asterisk on the Sales end." loading="lazy" decoding="async">
-    <span class="callout" style="left:72%;top:42%;" aria-hidden="true">1</span><span class="callout" style="left:28%;top:55%;" aria-hidden="true">2</span>
+    <span class="callout-line" style="left:62%;top:27.5%;width:3.10%;transform:rotate(90.0deg);"></span><span class="callout" style="left:62%;top:27.5%;" aria-hidden="true">1</span><span class="callout-line" style="left:35%;top:45%;width:3.10%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:35%;top:45%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>The 1 sits on the Products side</span> <span lang="id" class="lang-id">· Angka 1 di sisi Products</span></li><li><span>The * sits on the Sales side</span> <span lang="id" class="lang-id">· Tanda * di sisi Sales</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The 1 sits on the Products side</span><span class="lang-id" lang="id">Angka 1 di sisi Products</span></li><li><span class="lang-en">The * sits on the Sales side</span><span class="lang-id" lang="id">Tanda * di sisi Sales</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Read it as: <em>one</em> product can appear in <em>many</em> sales rows. That's exactly right for our data.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Baca sebagai: <em>satu</em> produk bisa muncul di <em>banyak</em> baris penjualan. Itu persis benar untuk data kita.</p>
+  <p class="lang-en">Read it as: <em>one</em> product can appear in <em>many</em> sales rows. That's exactly right for our data.</p>
+<p class="lang-id" lang="id">Baca sebagai: <em>satu</em> produk bisa muncul di <em>banyak</em> baris penjualan. Itu persis benar untuk data kita.</p>
   
   
 </li><li class="step">
-  <p>An arrow on the line shows which way filtering flows. For beginners, the default single arrow is what you want. Don't change it.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Panah pada garis menunjukkan arah aliran filter. Untuk pemula, panah tunggal bawaan itu yang kamu mau. Jangan diubah.</p>
+  <p class="lang-en">An arrow on the line shows which way filtering flows. For beginners, the default single arrow is what you want. Don't change it.</p>
+<p class="lang-id" lang="id">Panah pada garis menunjukkan arah aliran filter. Untuk pemula, panah tunggal bawaan itu yang kamu mau. Jangan diubah.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>You can point at the 1 and the * on your relationship line and say which table is the "one" side.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kamu bisa menunjuk angka 1 dan tanda * di garis relationship-mu dan menyebut tabel mana yang sisi "one".</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">You can point at the 1 and the * on your relationship line and say which table is the "one" side.</p>
+<p class="lang-id" lang="id">Kamu bisa menunjuk angka 1 dan tanda * di garis relationship-mu dan menyebut tabel mana yang sisi "one".</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-cardinality.svg"
     aria-label="The relationship line labelled with the 1 and many ends clearly marked. (tap to open full screen)">
@@ -118,15 +120,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>When a report shows weird totals, nine times out of ten the relationship symbols are wrong. Reading them is your first debugging check, forever.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kalau report menampilkan total aneh, sembilan dari sepuluh kali simbol relationship-nya salah. Membacanya adalah pengecekan debug pertamamu, selamanya.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">When a report shows weird totals, nine times out of ten the relationship symbols are wrong. Reading them is your first debugging check, forever.</p>
+<p class="lang-id" lang="id">Kalau report menampilkan total aneh, sembilan dari sepuluh kali simbol relationship-nya salah. Membacanya adalah pengecekan debug pertamamu, selamanya.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Turning on both-direction arrows to &quot;fix&quot; things</strong> <span lang="id">/ Menyalakan panah dua arah buat &quot;memperbaiki&quot;</span><br>This causes more problems than it solves for beginners. Leave the arrow single. <span lang="id" class="lang-id" style="color:var(--text-muted)">Ini menimbulkan lebih banyak masalah daripada solusi buat pemula. Biarkan panahnya tunggal.</span></li><li><strong>Worrying about the symbols too much</strong> <span lang="id">/ Terlalu mengkhawatirkan simbolnya</span><br>For one-to-many joins on IDs, the defaults are almost always correct. Recognise, don't obsess. <span lang="id" class="lang-id" style="color:var(--text-muted)">Untuk join one-to-many pada ID, bawaannya hampir selalu benar. Kenali saja, nggak usah berlebihan.</span></li>
+          <li><strong><span class="lang-en">Turning on both-direction arrows to &quot;fix&quot; things</span><span class="lang-id" lang="id">Menyalakan panah dua arah buat &quot;memperbaiki&quot;</span></strong><br><span class="lang-en">This causes more problems than it solves for beginners. Leave the arrow single.</span><span class="lang-id" lang="id">Ini menimbulkan lebih banyak masalah daripada solusi buat pemula. Biarkan panahnya tunggal.</span></li><li><strong><span class="lang-en">Worrying about the symbols too much</span><span class="lang-id" lang="id">Terlalu mengkhawatirkan simbolnya</span></strong><br><span class="lang-en">For one-to-many joins on IDs, the defaults are almost always correct. Recognise, don't obsess.</span><span class="lang-id" lang="id">Untuk join one-to-many pada ID, bawaannya hampir selalu benar. Kenali saja, nggak usah berlebihan.</span></li>
         </ul>
       </div>
 

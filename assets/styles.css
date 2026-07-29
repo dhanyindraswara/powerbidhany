@@ -295,6 +295,60 @@ section {
 }
 
 /* --------------------------------------------------------------------------
+   Language switch (reading language for tutorial content)
+   With JavaScript off, both languages stay visible — nothing is lost.
+   -------------------------------------------------------------------------- */
+.lang-switch {
+  display: inline-flex;
+  margin-left: var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.lang-switch button {
+  min-height: 36px;
+  min-width: 44px;
+  padding: 0 var(--s-3);
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background var(--t-hover), color var(--t-hover);
+}
+
+.lang-switch button:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+/* The toggle itself: hide whichever language is not selected. */
+html[data-lang="id"] .lang-en,
+html[data-lang="en"] .lang-id {
+  display: none;
+}
+
+/* Bahasa Indonesia paragraphs are equal citizens, not muted footnotes. */
+p.lang-id {
+  color: inherit;
+}
+
+/* When both languages show (no JS), separate them a little. */
+html:not([data-lang]) p.lang-id {
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */
 .btn {

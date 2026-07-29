@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,72 +60,71 @@
 
       <h1>Remove columns and rows you don&#x27;t need</h1>
 
-      <p class="outcome">In about 11 minutes you will be able to
-      delete an unwanted column and remove blank rows.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      11 menit kamu bakal bisa menghapus kolom yang nggak dibutuhkan dan membuang baris kosong.</span></p>
+      <p class="outcome"><span class="lang-en">In about 11 minutes you will be able to delete an unwanted column and remove blank rows.</span><span class="lang-id" lang="id">Dalam sekitar 11 menit kamu bakal bisa menghapus kolom yang nggak dibutuhkan dan membuang baris kosong.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>11 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Easy</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Power Query open with messy-orders.</strong></span>
+        <span class="meta-item">⏱ <strong>11 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Easy</span><span class="lang-id" lang="id">Gampang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Power Query open with messy-orders.</span><span class="lang-id" lang="id">Power Query terbuka dengan messy-orders.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Messy orders</strong>
-    <span>Same messy file from the last lesson. <span lang="id">/ File berantakan yang sama dari pelajaran sebelumnya.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Messy orders</strong>
+    <span><span class="lang-en">Same messy file from the last lesson.</span><span class="lang-id" lang="id">File berantakan yang sama dari pelajaran sebelumnya.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/messy-orders.csv" download>⬇ Download dataset</a>
 </div>
 
-      <p>The messy file has a useless Notes column and some totally blank rows. Let's throw them out. This is the most common cleaning you'll ever do.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">File berantakan ini punya kolom Notes yang nggak berguna dan beberapa baris kosong. Ayo buang. Ini pembersihan paling umum yang bakal kamu lakukan.</p>
+      <p class="lang-en">The messy file has a useless Notes column and some totally blank rows. Let's throw them out. This is the most common cleaning you'll ever do.</p>
+<p class="lang-id" lang="id">File berantakan ini punya kolom Notes yang nggak berguna dan beberapa baris kosong. Ayo buang. Ini pembersihan paling umum yang bakal kamu lakukan.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Click once on the header of the <strong>Notes</strong> column to select the whole column. It turns a light colour.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik sekali pada header kolom <strong>Notes</strong> untuk memilih seluruh kolom. Warnanya berubah jadi lebih terang.</p>
+  <p class="lang-en">Click once on the header of the <strong>Notes</strong> column to select the whole column. It turns a light colour.</p>
+<p class="lang-id" lang="id">Klik sekali pada header kolom <strong>Notes</strong> untuk memilih seluruh kolom. Warnanya berubah jadi lebih terang.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-select-column.svg"
     aria-label="The Power Query data grid with the Notes column header selected and highlighted. (tap to open full screen)">
     <img src="../../../assets/img/pq-select-column.svg" alt="The Power Query data grid with the Notes column header selected and highlighted." loading="lazy" decoding="async">
-    <span class="callout" style="left:70%;top:18%;" aria-hidden="true">1</span>
+    <span class="callout-line" style="left:70.9%;top:30%;width:6.82%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:70.9%;top:30%;" aria-hidden="true">1</span>
   </button>
-  <ol class="figure-legend"><li><span>Click the Notes column header</span> <span lang="id" class="lang-id">· Klik header kolom Notes</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Click the Notes column header</span><span class="lang-id" lang="id">Klik header kolom Notes</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Right-click the header and choose <strong>Remove</strong>. The column disappears and a "Removed Columns" step appears on the right.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Klik kanan headernya dan pilih <strong>Remove</strong>. Kolomnya hilang dan langkah "Removed Columns" muncul di kanan.</p>
+  <p class="lang-en">Right-click the header and choose <strong>Remove</strong>. The column disappears and a "Removed Columns" step appears on the right.</p>
+<p class="lang-id" lang="id">Klik kanan headernya dan pilih <strong>Remove</strong>. Kolomnya hilang dan langkah "Removed Columns" muncul di kanan.</p>
   <p class="menu-path">Menu path: <span class="path">Right-click column ▸ Remove</span></p>
   
 </li><li class="step">
-  <p>Now the blank rows. On the Home tab click <strong>Remove Rows</strong>, then <strong>Remove Blank Rows</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Sekarang baris kosongnya. Di tab Home klik <strong>Remove Rows</strong>, lalu <strong>Remove Blank Rows</strong>.</p>
+  <p class="lang-en">Now the blank rows. On the Home tab click <strong>Remove Rows</strong>, then <strong>Remove Blank Rows</strong>.</p>
+<p class="lang-id" lang="id">Sekarang baris kosongnya. Di tab Home klik <strong>Remove Rows</strong>, lalu <strong>Remove Blank Rows</strong>.</p>
   <p class="menu-path">Menu path: <span class="path">Home ▸ Remove Rows ▸ Remove Blank Rows</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-remove-rows.svg"
     aria-label="The Home ribbon of Power Query with the Remove Rows menu open showing the Remove Blank Rows option. (tap to open full screen)">
     <img src="../../../assets/img/pq-remove-rows.svg" alt="The Home ribbon of Power Query with the Remove Rows menu open showing the Remove Blank Rows option." loading="lazy" decoding="async">
-    <span class="callout" style="left:30%;top:20%;" aria-hidden="true">1</span><span class="callout" style="left:40%;top:55%;" aria-hidden="true">2</span>
+    <span class="callout-line" style="left:56.4%;top:27%;width:7.44%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:56.4%;top:27%;" aria-hidden="true">1</span><span class="callout" style="left:40%;top:33.7%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>Remove Rows menu</span> <span lang="id" class="lang-id">· Menu Remove Rows</span></li><li><span>Remove Blank Rows</span> <span lang="id" class="lang-id">· Remove Blank Rows</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Remove Rows menu</span><span class="lang-id" lang="id">Menu Remove Rows</span></li><li><span class="lang-en">Remove Blank Rows</span><span class="lang-id" lang="id">Remove Blank Rows</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>Check the Applied Steps panel. You should now see both your steps listed in order. You can click any step to travel back in time.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Cek panel Applied Steps. Sekarang harusnya kedua langkahmu tercatat berurutan. Kamu bisa klik langkah mana pun untuk kembali ke masa lalu.</p>
+  <p class="lang-en">Check the Applied Steps panel. You should now see both your steps listed in order. You can click any step to travel back in time.</p>
+<p class="lang-id" lang="id">Cek panel Applied Steps. Sekarang harusnya kedua langkahmu tercatat berurutan. Kamu bisa klik langkah mana pun untuk kembali ke masa lalu.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>The Notes column is gone, there are no empty rows, and Applied Steps shows Removed Columns followed by Removed Blank Rows.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kolom Notes hilang, nggak ada baris kosong, dan Applied Steps menampilkan Removed Columns lalu Removed Blank Rows.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">The Notes column is gone, there are no empty rows, and Applied Steps shows Removed Columns followed by Removed Blank Rows.</p>
+<p class="lang-id" lang="id">Kolom Notes hilang, nggak ada baris kosong, dan Applied Steps menampilkan Removed Columns lalu Removed Blank Rows.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-cleaned-grid.svg"
     aria-label="The cleaned data grid without the Notes column, and the Applied Steps panel showing two new steps. (tap to open full screen)">
@@ -134,15 +137,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>Extra columns and blank rows make every later chart harder and slower. Cleaning them at the door means everything downstream just works.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kolom berlebih dan baris kosong bikin setiap grafik nanti lebih susah dan lambat. Membersihkannya di pintu masuk bikin semua hal setelahnya langsung beres.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">Extra columns and blank rows make every later chart harder and slower. Cleaning them at the door means everything downstream just works.</p>
+<p class="lang-id" lang="id">Kolom berlebih dan baris kosong bikin setiap grafik nanti lebih susah dan lambat. Membersihkannya di pintu masuk bikin semua hal setelahnya langsung beres.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Deleting a column you actually needed</strong> <span lang="id">/ Menghapus kolom yang sebenarnya dibutuhkan</span><br>No panic — just delete the Removed Columns step from Applied Steps and the column comes right back. <span lang="id" class="lang-id" style="color:var(--text-muted)">Nggak usah panik — cukup hapus langkah Removed Columns dari Applied Steps dan kolomnya kembali lagi.</span></li><li><strong>Removing rows by hand one at a time</strong> <span lang="id">/ Menghapus baris satu per satu manual</span><br>Use the Remove Rows menu. Manual deleting doesn't record as a repeatable step. <span lang="id" class="lang-id" style="color:var(--text-muted)">Pakai menu Remove Rows. Menghapus manual nggak terekam sebagai langkah yang bisa diulang.</span></li>
+          <li><strong><span class="lang-en">Deleting a column you actually needed</span><span class="lang-id" lang="id">Menghapus kolom yang sebenarnya dibutuhkan</span></strong><br><span class="lang-en">No panic — just delete the Removed Columns step from Applied Steps and the column comes right back.</span><span class="lang-id" lang="id">Nggak usah panik — cukup hapus langkah Removed Columns dari Applied Steps dan kolomnya kembali lagi.</span></li><li><strong><span class="lang-en">Removing rows by hand one at a time</span><span class="lang-id" lang="id">Menghapus baris satu per satu manual</span></strong><br><span class="lang-en">Use the Remove Rows menu. Manual deleting doesn't record as a repeatable step.</span><span class="lang-id" lang="id">Pakai menu Remove Rows. Menghapus manual nggak terekam sebagai langkah yang bisa diulang.</span></li>
         </ul>
       </div>
 

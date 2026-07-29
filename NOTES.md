@@ -18,13 +18,21 @@ All of it lives in one file (`scripts/content.py`) so it is easy to edit.
 Lesson counts per module: 0→3, 1→3, 2→4, 3→3, 4→3, 5→3, 6→2, 7→2 (23 total).
 Adjust freely in `content.py`.
 
-## 2. Screenshots are placeholders
+## 2. Screenshots are drawn, not captured
 
-The brief says *you* will supply raw Power BI Desktop screenshots. Until then,
-each image is a clean light-mode SVG mock of the Power BI window so the
-annotation system is fully visible and testable. Replace them per the
-"Swapping in real screenshots" section of the README. Alt text is written for
-the real screenshot each figure represents.
+The brief says *you* will supply raw Power BI Desktop screenshots. Rather than
+leave grey boxes, I drew all 55 of them in `scripts/art.py` as light-mode SVG
+mockups of the real UI — the ribbon with its actual command names, the
+Visualizations and Fields panes, the Power Query Editor with Applied Steps,
+Model view with the 1-to-many symbols, the CSV import dialog, the Microsoft
+Store, and the Power BI Service in a browser.
+
+They are deliberately *simplified but accurate*: every menu name, button and
+pane is where it really is and spelled as it really is, so a learner following
+along recognises their own screen. They are not pixel-perfect reproductions.
+When you have real captures, drop them in per the README — the annotation
+system takes them unchanged. Alt text is already written for the real
+screenshot each figure represents.
 
 ## 3. Accent colour vs WCAG AA — a real conflict I had to resolve
 
@@ -52,17 +60,23 @@ fill, white numeral, 2px white ring). Their numerals are decorative and
 `aria-hidden`; the accessible information lives in the numbered legend text
 beneath each image, which is dark-on-white and easily passes AA.
 
-## 4. Bilingual layout choice
+## 4. Bilingual handling — now a toggle
 
-The brief wanted interface chrome in English and tutorial content in English +
-Bahasa Indonesia. I render each explanatory passage as an English paragraph
-immediately followed by its Bahasa Indonesia counterpart (muted, `lang="id"`).
+Interface chrome stays in English. Tutorial content is written in both English
+and casual Bahasa Indonesia ("aku"/"kamu", never "gue"), and an **ID / EN**
+switch in the header picks which to read.
+
+Both languages stay in the HTML; the toggle only sets `data-lang` on `<html>`
+and CSS hides the other. That keeps the "must work with JavaScript disabled for
+reading" requirement intact — with JS off you simply see both, which is what the
+site did before the toggle existed.
+
+The default follows the browser language and falls back to Bahasa Indonesia,
+since that is the target audience. Assumption worth checking: I decided ID
+should win the fallback rather than EN. One line in `app.js` if you disagree.
+
 Power BI menu names are left in English inside both languages, as required, so
-learners can find them in the app.
-
-I did not add a language toggle, because showing both at once suits a beginner
-who may want to cross-check meaning, and it keeps every page working without JS.
-If you prefer a toggle later, the `lang="id"` hooks are already in place.
+learners can still find them in the app.
 
 ## 5. "Datasets as .zip"
 

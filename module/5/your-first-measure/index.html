@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,72 +60,71 @@
 
       <h1>Your first measure</h1>
 
-      <p class="outcome">In about 13 minutes you will be able to
-      write a Total Sales measure using SUM and show it on a card.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      13 menit kamu bakal bisa menulis measure Total Sales pakai SUM dan menampilkannya di card.</span></p>
+      <p class="outcome"><span class="lang-en">In about 13 minutes you will be able to write a Total Sales measure using SUM and show it on a card.</span><span class="lang-id" lang="id">Dalam sekitar 13 menit kamu bakal bisa menulis measure Total Sales pakai SUM dan menampilkannya di card.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>13 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Sales table loaded.</strong></span>
+        <span class="meta-item">⏱ <strong>13 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Sales table loaded.</span><span class="lang-id" lang="id">Tabel Sales sudah dimuat.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Sales and products</strong>
-    <span>The linked tables you already know. <span lang="id">/ Tabel terhubung yang sudah kamu kenal.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Sales and products</strong>
+    <span><span class="lang-en">The linked tables you already know.</span><span class="lang-id" lang="id">Tabel terhubung yang sudah kamu kenal.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/sales-and-products.zip" download>⬇ Download dataset</a>
 </div>
 
-      <p>Time to write actual <span class='term' title='The small formula language used to write measures in Power BI. Stands for Data Analysis Expressions'>DAX</span> — Power BI's formula language. Your first one is three words long. Don't be scared.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Saatnya menulis DAX beneran — bahasa formula Power BI. Yang pertama cuma tiga kata. Jangan takut.</p>
+      <p class="lang-en">Time to write actual <span class='term' title='The small formula language used to write measures in Power BI. Stands for Data Analysis Expressions'>DAX</span> — Power BI's formula language. Your first one is three words long. Don't be scared.</p>
+<p class="lang-id" lang="id">Saatnya menulis DAX beneran — bahasa formula Power BI. Yang pertama cuma tiga kata. Jangan takut.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>In the Fields pane, right-click the <strong>Sales</strong> table and choose <strong>New measure</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Di panel Fields, klik kanan tabel <strong>Sales</strong> dan pilih <strong>New measure</strong>.</p>
+  <p class="lang-en">In the Fields pane, right-click the <strong>Sales</strong> table and choose <strong>New measure</strong>.</p>
+<p class="lang-id" lang="id">Di panel Fields, klik kanan tabel <strong>Sales</strong> dan pilih <strong>New measure</strong>.</p>
   <p class="menu-path">Menu path: <span class="path">Right-click Sales table ▸ New measure</span></p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/new-measure.svg"
     aria-label="The Fields pane right-click menu on the Sales table with New measure highlighted. (tap to open full screen)">
     <img src="../../../assets/img/new-measure.svg" alt="The Fields pane right-click menu on the Sales table with New measure highlighted." loading="lazy" decoding="async">
-    <span class="callout" style="left:45%;top:40%;" aria-hidden="true">1</span><span class="callout" style="left:60%;top:60%;" aria-hidden="true">2</span>
+    <span class="callout-line" style="left:80%;top:22%;width:7.43%;transform:rotate(19.5deg);"></span><span class="callout" style="left:80%;top:22%;" aria-hidden="true">1</span><span class="callout" style="left:72%;top:33%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>Right-click the Sales table</span> <span lang="id" class="lang-id">· Klik kanan tabel Sales</span></li><li><span>Choose New measure</span> <span lang="id" class="lang-id">· Pilih New measure</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">Right-click the Sales table</span><span class="lang-id" lang="id">Klik kanan tabel Sales</span></li><li><span class="lang-en">Choose New measure</span><span class="lang-id" lang="id">Pilih New measure</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>A formula bar appears at the top. Type exactly: <code>Total Sales = SUM(Sales[Amount])</code></p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Formula bar muncul di atas. Ketik persis: <code>Total Sales = SUM(Sales[Amount])</code></p>
+  <p class="lang-en">A formula bar appears at the top. Type exactly: <code>Total Sales = SUM(Sales[Amount])</code></p>
+<p class="lang-id" lang="id">Formula bar muncul di atas. Ketik persis: <code>Total Sales = SUM(Sales[Amount])</code></p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/measure-formula.svg"
     aria-label="The DAX formula bar showing Total Sales = SUM(Sales[Amount]) being typed. (tap to open full screen)">
     <img src="../../../assets/img/measure-formula.svg" alt="The DAX formula bar showing Total Sales = SUM(Sales[Amount]) being typed." loading="lazy" decoding="async">
-    <span class="callout" style="left:45%;top:35%;" aria-hidden="true">1</span><span class="callout" style="left:40%;top:55%;" aria-hidden="true">2</span>
+    <span class="callout-line" style="left:39%;top:27%;width:5.27%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:39%;top:27%;" aria-hidden="true">1</span><span class="callout" style="left:32%;top:27%;" aria-hidden="true">2</span>
   </button>
-  <ol class="figure-legend"><li><span>The formula bar</span> <span lang="id" class="lang-id">· Formula bar</span></li><li><span>Type the measure here</span> <span lang="id" class="lang-id">· Ketik measure di sini</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">The formula bar</span><span class="lang-id" lang="id">Formula bar</span></li><li><span class="lang-en">Type the measure here</span><span class="lang-id" lang="id">Ketik measure di sini</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>As you type <code>Sales[</code>, a suggestion list pops up. Pick <strong>Amount</strong> from it rather than typing the whole thing. Press Enter to finish.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Saat kamu mengetik <code>Sales[</code>, daftar saran muncul. Pilih <strong>Amount</strong> dari situ daripada mengetik semuanya. Tekan Enter untuk menyelesaikan.</p>
+  <p class="lang-en">As you type <code>Sales[</code>, a suggestion list pops up. Pick <strong>Amount</strong> from it rather than typing the whole thing. Press Enter to finish.</p>
+<p class="lang-id" lang="id">Saat kamu mengetik <code>Sales[</code>, daftar saran muncul. Pilih <strong>Amount</strong> dari situ daripada mengetik semuanya. Tekan Enter untuk menyelesaikan.</p>
   
   
 </li><li class="step">
-  <p>Total Sales now appears in the Fields pane with a little calculator icon. Add a Card visual and tick Total Sales to see it.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Total Sales sekarang muncul di panel Fields dengan ikon kalkulator kecil. Tambah visual Card dan centang Total Sales untuk melihatnya.</p>
+  <p class="lang-en">Total Sales now appears in the Fields pane with a little calculator icon. Add a Card visual and tick Total Sales to see it.</p>
+<p class="lang-id" lang="id">Total Sales sekarang muncul di panel Fields dengan ikon kalkulator kecil. Tambah visual Card dan centang Total Sales untuk melihatnya.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>Total Sales sits in the Fields pane with a calculator icon, and a card shows the summed total. Add a product slicer and the total reacts.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Total Sales ada di panel Fields dengan ikon kalkulator, dan card menampilkan total yang dijumlah. Tambah slicer produk dan totalnya bereaksi.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">Total Sales sits in the Fields pane with a calculator icon, and a card shows the summed total. Add a product slicer and the total reacts.</p>
+<p class="lang-id" lang="id">Total Sales ada di panel Fields dengan ikon kalkulator, dan card menampilkan total yang dijumlah. Tambah slicer produk dan totalnya bereaksi.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-measure-card.svg"
     aria-label="A card showing the Total Sales measure result, with the measure visible in the Fields pane. (tap to open full screen)">
@@ -134,15 +137,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>SUM is the measure you'll write more than any other. Once you've written one measure, every other DAX formula is just a variation on the same shape.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">SUM adalah measure yang paling sering kamu tulis. Begitu kamu menulis satu measure, tiap formula DAX lain cuma variasi dari bentuk yang sama.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">SUM is the measure you'll write more than any other. Once you've written one measure, every other DAX formula is just a variation on the same shape.</p>
+<p class="lang-id" lang="id">SUM adalah measure yang paling sering kamu tulis. Begitu kamu menulis satu measure, tiap formula DAX lain cuma variasi dari bentuk yang sama.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Typing the column name instead of picking it</strong> <span lang="id">/ Mengetik nama kolom alih-alih memilihnya</span><br>One typo and the measure errors. Always choose from the suggestion list so the name is exact. <span lang="id" class="lang-id" style="color:var(--text-muted)">Satu typo dan measure-nya error. Selalu pilih dari daftar saran supaya namanya persis.</span></li><li><strong>Confusing New measure with New column</strong> <span lang="id">/ Bingung antara New measure dan New column</span><br>They sit next to each other in the menu. For totals you want New measure, every time. <span lang="id" class="lang-id" style="color:var(--text-muted)">Keduanya bersebelahan di menu. Untuk total kamu mau New measure, tiap saat.</span></li>
+          <li><strong><span class="lang-en">Typing the column name instead of picking it</span><span class="lang-id" lang="id">Mengetik nama kolom alih-alih memilihnya</span></strong><br><span class="lang-en">One typo and the measure errors. Always choose from the suggestion list so the name is exact.</span><span class="lang-id" lang="id">Satu typo dan measure-nya error. Selalu pilih dari daftar saran supaya namanya persis.</span></li><li><strong><span class="lang-en">Confusing New measure with New column</span><span class="lang-id" lang="id">Bingung antara New measure dan New column</span></strong><br><span class="lang-en">They sit next to each other in the menu. For totals you want New measure, every time.</span><span class="lang-id" lang="id">Keduanya bersebelahan di menu. Untuk total kamu mau New measure, tiap saat.</span></li>
         </ul>
       </div>
 

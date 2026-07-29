@@ -24,6 +24,10 @@
       <a href="../../../curriculum/">Curriculum</a>
       <a href="../../../downloads/">Downloads</a>
       <a href="../../../about/">About</a>
+      <div class="lang-switch js-only" role="group" aria-label="Reading language">
+        <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -56,69 +60,68 @@
 
       <h1>Fix data types</h1>
 
-      <p class="outcome">In about 11 minutes you will be able to
-      set a column to the correct type so numbers add up and dates sort properly.<br>
-      <span lang="id" style="font-weight:400;color:var(--text-muted)">Dalam sekitar
-      11 menit kamu bakal bisa mengatur kolom ke tipe yang benar supaya angka bisa dijumlah dan tanggal bisa diurutkan dengan benar.</span></p>
+      <p class="outcome"><span class="lang-en">In about 11 minutes you will be able to set a column to the correct type so numbers add up and dates sort properly.</span><span class="lang-id" lang="id">Dalam sekitar 11 menit kamu bakal bisa mengatur kolom ke tipe yang benar supaya angka bisa dijumlah dan tanggal bisa diurutkan dengan benar.</span></p>
 
       <div class="meta-row">
-        <span class="meta-item">⏱ <strong>11 min</strong></span>
-        <span class="meta-item">📊 Difficulty: <strong>Medium</strong></span>
-        <span class="meta-item">✅ You need first: <strong>Columns and rows cleaned from the last lesson.</strong></span>
+        <span class="meta-item">⏱ <strong>11 <span class="lang-en">min</span><span class="lang-id" lang="id">menit</span></strong></span>
+        <span class="meta-item"><span class="lang-en">Difficulty</span><span class="lang-id" lang="id">Tingkat</span>: <strong><span class="lang-en">Medium</span><span class="lang-id" lang="id">Sedang</span></strong></span>
+        <span class="meta-item"><span class="lang-en">You need first</span><span class="lang-id" lang="id">Butuh dulu</span>:
+          <strong><span class="lang-en">Columns and rows cleaned from the last lesson.</span><span class="lang-id" lang="id">Kolom dan baris sudah dibersihkan dari pelajaran sebelumnya.</span></strong></span>
       </div>
 
       <div class="dataset-cta">
   <div class="ds-text">
-    <strong>Practice dataset: Messy orders</strong>
-    <span>Continue with your cleaned file. <span lang="id">/ Lanjut dengan file yang sudah kamu bersihkan.</span></span>
+    <strong><span class="lang-en">Practice dataset</span><span class="lang-id" lang="id">Dataset latihan</span>: Messy orders</strong>
+    <span><span class="lang-en">Continue with your cleaned file.</span><span class="lang-id" lang="id">Lanjut dengan file yang sudah kamu bersihkan.</span></span>
   </div>
   <a class="btn btn-download" href="../../../datasets/messy-orders.csv" download>⬇ Download dataset</a>
 </div>
 
-      <p>Every column has a <span class='term' title='What kind of value a column holds: text, whole number, decimal, date, and so on'>data type</span>. If a number column is set to text, Power BI won't add it up. Fixing types is quiet but essential.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Setiap kolom punya data type. Kalau kolom angka disetel sebagai teks, Power BI nggak akan menjumlahkannya. Memperbaiki tipe itu senyap tapi wajib.</p>
+      <p class="lang-en">Every column has a <span class='term' title='What kind of value a column holds: text, whole number, decimal, date, and so on'>data type</span>. If a number column is set to text, Power BI won't add it up. Fixing types is quiet but essential.</p>
+<p class="lang-id" lang="id">Setiap kolom punya data type. Kalau kolom angka disetel sebagai teks, Power BI nggak akan menjumlahkannya. Memperbaiki tipe itu senyap tapi wajib.</p>
 
       <ol class="steps">
         <li class="step">
-  <p>Look at the tiny icon on the left of each column header. <code>ABC</code> means text, <code>123</code> means whole number, a calendar means date.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Lihat ikon kecil di kiri tiap header kolom. <code>ABC</code> berarti teks, <code>123</code> berarti bilangan bulat, kalender berarti tanggal.</p>
+  <p class="lang-en">Look at the tiny icon on the left of each column header. <code>ABC</code> means text, <code>123</code> means whole number, a calendar means date.</p>
+<p class="lang-id" lang="id">Lihat ikon kecil di kiri tiap header kolom. <code>ABC</code> berarti teks, <code>123</code> berarti bilangan bulat, kalender berarti tanggal.</p>
   
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/pq-type-icons.svg"
     aria-label="Column headers in Power Query each showing a small data type icon to the left of the column name. (tap to open full screen)">
     <img src="../../../assets/img/pq-type-icons.svg" alt="Column headers in Power Query each showing a small data type icon to the left of the column name." loading="lazy" decoding="async">
-    <span class="callout" style="left:12%;top:18%;" aria-hidden="true">1</span><span class="callout" style="left:45%;top:18%;" aria-hidden="true">2</span><span class="callout" style="left:78%;top:18%;" aria-hidden="true">3</span>
+    <span class="callout-line" style="left:17%;top:25%;width:4.59%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:17%;top:25%;" aria-hidden="true">1</span><span class="callout-line" style="left:34%;top:25%;width:4.59%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:34%;top:25%;" aria-hidden="true">2</span><span class="callout-line" style="left:55%;top:25%;width:4.59%;transform:rotate(-90.0deg);"></span><span class="callout" style="left:55%;top:25%;" aria-hidden="true">3</span>
   </button>
-  <ol class="figure-legend"><li><span>ABC icon = text</span> <span lang="id" class="lang-id">· Ikon ABC = teks</span></li><li><span>123 icon = whole number</span> <span lang="id" class="lang-id">· Ikon 123 = bilangan bulat</span></li><li><span>Calendar icon = date</span> <span lang="id" class="lang-id">· Ikon kalender = tanggal</span></li></ol>
+  <ol class="figure-legend"><li><span class="lang-en">ABC icon = text</span><span class="lang-id" lang="id">Ikon ABC = teks</span></li><li><span class="lang-en">123 icon = whole number</span><span class="lang-id" lang="id">Ikon 123 = bilangan bulat</span></li><li><span class="lang-en">Calendar icon = date</span><span class="lang-id" lang="id">Ikon kalender = tanggal</span></li></ol>
   
 </figure>
 </li><li class="step">
-  <p>The <strong>Price</strong> column shows ABC (text) but holds numbers. Click its type icon.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kolom <strong>Price</strong> menampilkan ABC (teks) padahal isinya angka. Klik ikon tipenya.</p>
+  <p class="lang-en">The <strong>Price</strong> column shows ABC (text) but holds numbers. Click its type icon.</p>
+<p class="lang-id" lang="id">Kolom <strong>Price</strong> menampilkan ABC (teks) padahal isinya angka. Klik ikon tipenya.</p>
   
   
 </li><li class="step">
-  <p>Choose <strong>Decimal Number</strong> from the list. The icon changes and the values line up to the right, which means they are now real numbers.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Pilih <strong>Decimal Number</strong> dari daftar. Ikonnya berubah dan nilainya rata kanan, tandanya sekarang benar-benar angka.</p>
+  <p class="lang-en">Choose <strong>Decimal Number</strong> from the list. The icon changes and the values line up to the right, which means they are now real numbers.</p>
+<p class="lang-id" lang="id">Pilih <strong>Decimal Number</strong> dari daftar. Ikonnya berubah dan nilainya rata kanan, tandanya sekarang benar-benar angka.</p>
   <p class="menu-path">Menu path: <span class="path">Click type icon ▸ Decimal Number</span></p>
   
 </li><li class="step">
-  <p>Do the same for <strong>Order Date</strong>: click its type icon and choose <strong>Date</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Lakukan hal sama untuk <strong>Order Date</strong>: klik ikon tipenya dan pilih <strong>Date</strong>.</p>
+  <p class="lang-en">Do the same for <strong>Order Date</strong>: click its type icon and choose <strong>Date</strong>.</p>
+<p class="lang-id" lang="id">Lakukan hal sama untuk <strong>Order Date</strong>: klik ikon tipenya dan pilih <strong>Date</strong>.</p>
   <p class="menu-path">Menu path: <span class="path">Click type icon ▸ Date</span></p>
   
 </li><li class="step">
-  <p>If a box asks to "Replace current" or "Add new step", choose <strong>Replace current</strong>.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Kalau ada kotak menanyakan "Replace current" atau "Add new step", pilih <strong>Replace current</strong>.</p>
+  <p class="lang-en">If a box asks to "Replace current" or "Add new step", choose <strong>Replace current</strong>.</p>
+<p class="lang-id" lang="id">Kalau ada kotak menanyakan "Replace current" atau "Add new step", pilih <strong>Replace current</strong>.</p>
   
   
 </li>
       </ol>
 
       <div class="checkpoint">
-  <h3><span aria-hidden="true">✓</span> Checkpoint — you should now see this</h3>
-  <p>Price shows a decimal-number icon and Order Date shows a calendar icon. Numbers sit on the right, dates read as real dates.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Price menampilkan ikon angka desimal dan Order Date menampilkan ikon kalender. Angka berada di kanan, tanggal terbaca sebagai tanggal betulan.</p>
+  <h3><span aria-hidden="true">✓</span>
+    <span class="lang-en">Checkpoint — you should now see this</span><span class="lang-id" lang="id">Checkpoint — sekarang kamu harusnya lihat ini</span></h3>
+  <p class="lang-en">Price shows a decimal-number icon and Order Date shows a calendar icon. Numbers sit on the right, dates read as real dates.</p>
+<p class="lang-id" lang="id">Price menampilkan ikon angka desimal dan Order Date menampilkan ikon kalender. Angka berada di kanan, tanggal terbaca sebagai tanggal betulan.</p>
   <figure class="figure">
   <button type="button" class="figure-frame" data-full="/assets/img/cp-fixed-types.svg"
     aria-label="The data grid with corrected type icons on the Price and Order Date columns. (tap to open full screen)">
@@ -131,15 +134,15 @@
 </div>
 
       <div class="callout-block">
-        <h3>Why this matters <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kenapa ini penting</span></h3>
-        <p>The most common "my total is wrong" bug in Power BI is a number column stuck as text. Fix types early and you dodge hours of confusion later.</p>
-<p lang="id" class="lang-id" style="color:var(--text-muted)">Bug "kok totalku salah" paling umum di Power BI adalah kolom angka yang nyangkut jadi teks. Perbaiki tipe sejak awal dan kamu terhindar dari berjam-jam kebingungan nanti.</p>
+        <h3><span class="lang-en">Why this matters</span><span class="lang-id" lang="id">Kenapa ini penting</span></h3>
+        <p class="lang-en">The most common "my total is wrong" bug in Power BI is a number column stuck as text. Fix types early and you dodge hours of confusion later.</p>
+<p class="lang-id" lang="id">Bug "kok totalku salah" paling umum di Power BI adalah kolom angka yang nyangkut jadi teks. Perbaiki tipe sejak awal dan kamu terhindar dari berjam-jam kebingungan nanti.</p>
       </div>
 
       <div class="callout-block">
-        <h3>Common mistakes <span lang="id" style="font-weight:400;color:var(--text-muted)">/ Kesalahan yang sering terjadi</span></h3>
+        <h3><span class="lang-en">Common mistakes</span><span class="lang-id" lang="id">Kesalahan yang sering terjadi</span></h3>
         <ul class="mistakes">
-          <li><strong>Ignoring the little type icons entirely</strong> <span lang="id">/ Mengabaikan ikon tipe kecil itu sama sekali</span><br>They are easy to miss but they control everything. Always glance at them after loading data. <span lang="id" class="lang-id" style="color:var(--text-muted)">Gampang terlewat tapi mengontrol segalanya. Selalu lirik ikonnya setelah memuat data.</span></li><li><strong>Setting a date to a number by accident</strong> <span lang="id">/ Menyetel tanggal jadi angka nggak sengaja</span><br>Dates turn into big numbers like 45000. If that happens, undo the step and pick Date instead. <span lang="id" class="lang-id" style="color:var(--text-muted)">Tanggal berubah jadi angka besar seperti 45000. Kalau itu terjadi, batalkan langkahnya dan pilih Date.</span></li>
+          <li><strong><span class="lang-en">Ignoring the little type icons entirely</span><span class="lang-id" lang="id">Mengabaikan ikon tipe kecil itu sama sekali</span></strong><br><span class="lang-en">They are easy to miss but they control everything. Always glance at them after loading data.</span><span class="lang-id" lang="id">Gampang terlewat tapi mengontrol segalanya. Selalu lirik ikonnya setelah memuat data.</span></li><li><strong><span class="lang-en">Setting a date to a number by accident</span><span class="lang-id" lang="id">Menyetel tanggal jadi angka nggak sengaja</span></strong><br><span class="lang-en">Dates turn into big numbers like 45000. If that happens, undo the step and pick Date instead.</span><span class="lang-id" lang="id">Tanggal berubah jadi angka besar seperti 45000. Kalau itu terjadi, batalkan langkahnya dan pilih Date.</span></li>
         </ul>
       </div>
 
