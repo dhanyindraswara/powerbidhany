@@ -13,6 +13,7 @@ consistency far better than hand-copying 23 lesson pages ever could.
 """
 
 import os
+import re
 import html
 import zipfile
 import random
@@ -31,6 +32,27 @@ def write(path, text):
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f:
         f.write(text)
+
+
+def relativize(htmlstr, path):
+    """Rewrite root-absolute internal href/src ("/assets/…") into paths relative
+    to this page's depth, so the site works when hosted under a sub-path
+    (GitHub Pages project sites), at the domain root (Cloudflare Pages), and even
+    opened straight from disk. External URLs (https://…) and anchors (#…) are
+    left untouched because they don't begin with a single slash."""
+    depth = path.count("/")          # index.html=0, curriculum/index.html=1, …
+    rel = "../" * depth
+
+    def repl(m):
+        attr, url = m.group(1), m.group(2)
+        new = rel + url
+        return f'{attr}="{new or "./"}"'
+
+    return re.sub(r'(href|src)="/([^"]*)"', repl, htmlstr)
+
+
+def write_html(path, htmlstr):
+    write(path, relativize(htmlstr, path))
 
 
 def lesson_id(mod_n, slug):
@@ -1079,10 +1101,13 @@ def build_datasets():
 
 def main():
     # top-level pages
-    write("index.html", render_home())
-    write("curriculum/index.html", render_curriculum())
-    write("downloads/index.html", render_downloads())
-    write("about/index.html", render_about())
+    write_html("index.html", render_home())
+    write_html("curriculum/index.html", render_curriculum())
+    write_html("downloads/index.html", render_downloads())
+    write_html("about/index.html", render_about())
+
+    # tell GitHub Pages not to run Jekyll over the static files
+    write(".nojekyll", "")
 
     # module + lesson pages, with prev/next wiring
     flat = []
@@ -1091,7 +1116,7 @@ def main():
             flat.append((mod, les))
 
     for mod in MODULES:
-        write(f"module/{mod['n']}/index.html", render_module(mod))
+        write_html(f"module/{mod['n']}/index.html", render_module(mod))
 
     for idx, (mod, les) in enumerate(flat):
         prev_link = None
@@ -1103,7 +1128,7 @@ def main():
             next_link = {"url": lesson_url(nm["n"], nl["slug"]), "label": "Next: " + nl["title"]}
         else:
             next_link = {"url": "/curriculum/", "label": "Back to curriculum — you finished!"}
-        write(
+        write_html(
             f"module/{mod['n']}/{les['slug']}/index.html",
             render_lesson(mod, les, prev_link, next_link),
         )
